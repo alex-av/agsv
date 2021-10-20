@@ -1,0 +1,64 @@
+
+    <section class="form-container" [@appear]>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+            <div class="user-field pb-1">
+
+                <app-input 
+                    id="user" 
+                    Labelcontent="Teléfono o Correo electrónico"
+                    type="text"
+                    [theme]="theme.dark"
+                    icon="user"
+                    value=""
+                    formControlName="user"
+                    iconColor="#C4E5FF"></app-input>
+
+            </div>
+    
+            <div class="password-field">
+
+                <app-input 
+                    id="password" 
+                    Labelcontent="Contraseña"
+                    type="password"
+                    [theme]="theme.dark"
+                    icon="pwd"
+                    value=""
+                    formControlName="password"
+                    iconColor="#C4E5FF"></app-input>
+
+            </div>
+
+            <div class="
+                w-full 
+                button-container 
+                flex 
+                justify-center 
+                flex-wrap
+                mt-10">
+
+
+
+                <app-button
+                    skin="primary-btn"
+                    type="submit"> Iniciar Sesión 
+                </app-button>
+            
+                <app-link-basic
+                    class="w-full text-center mt-4" 
+                    url="#"
+                    display="block"
+                    classes="light"
+                    [size]="0.8"
+                    >¿ Olvidaste tu contraseña ? 
+                </app-link-basic>
+            
+            </div>
+
+
+    
+        </form>
+    
+    </section>

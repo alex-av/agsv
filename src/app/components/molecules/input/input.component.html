@@ -1,0 +1,46 @@
+
+<div [ngClass]="theme" class=" my-4" [class.error]="error" >
+    <app-icon *ngIf="icon"
+        class="inner-icon"
+        [icon]="icon"
+        [color]="iconColor"
+        ></app-icon>    
+
+    <label [for]="id" class="pl-2" [ngClass]="labelPos"> {{ Labelcontent }} </label>
+
+    <input 
+        #inputField
+        [type]="type" 
+        [id]="id" 
+        [placeholder]="placeholder" 
+        [name]="id"
+        class="pt-6 pb-2 pr-2 w-full"
+        [ngClass]="icon ? 'pl-10' : 'pl-2'"
+        [class.error]="error"
+        autocomplete="off"
+        [style.fontSize]="size"
+        [value]="value"
+        (input)="onInput($event)"
+        [required]="required"
+    />
+</div>
+
+
+<!-- TODO: Ajustar el componente input para que reciba las api de los diferentes forms de angular
+
+    <input 
+        #inputField
+        [type]="type" 
+        [id]="inputId" 
+        [placeholder]="placeholder" 
+        [name]="inputId"
+        [formControlName] ="_formControlName"
+        class="pt-6 pb-2 pr-2 w-full"
+        [ngClass]="icon ? 'pl-10' : 'pl-2'"
+        [class.error]="error"
+        autocomplete="off"
+        (ngModelChange)="activateField()"
+        [style.fontSize]="size"
+    />
+
+-->

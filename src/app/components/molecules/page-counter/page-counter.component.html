@@ -1,0 +1,3 @@
+<div class="dots-container flex justify-center">
+    <span *ngFor="let dot of addDots(dots); let i= index" [ngClass]="activeDot(i, page)"></span>
+</div>

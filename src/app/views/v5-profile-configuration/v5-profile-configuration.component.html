@@ -1,0 +1,30 @@
+<app-cancel-reg-buttons
+(onGoBack)="goBack('myUrl')"
+(onCancelReg)="cancelReg('myUrl')"
+></app-cancel-reg-buttons>
+    
+        <div class="profile-button-container w-full flex justify-center">
+            <!-- Profile button -->
+            <app-profile-button
+                profile="Investigador"
+                [arrow]="false"
+                [button]="false">
+            </app-profile-button>
+            <!-- Profile button -->
+
+        </div>
+    
+        <!--  -->
+    
+        <h2 class="
+        w-full 
+        text-center
+        mb-4
+        ">Configura tu perfil</h2>
+
+        <div class="configure-form pb-5">
+            <app-form-profile-productor [visible]="false"></app-form-profile-productor>
+            <app-form-profile-investigador [visible]="true"></app-form-profile-investigador>
+            <app-form-profile-extensionista [visible]="false"></app-form-profile-extensionista>
+        </div>
+

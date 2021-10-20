@@ -1,0 +1,67 @@
+
+<!-- IF MODAL -->
+<section *ngIf="type==='modal' && visible " >
+    
+    <div class="modal-container w-full h-full flex justify-center items-center md:top-0" *ngIf="visible" [@appear]>
+        <div 
+            class="modal-content mx-auto p-2 w-4/5 md:w-3/5 lg:max-w-3xl"
+            >
+            <div class="modal-header">
+                <app-icon *ngIf="icon" [icon]="icon" color="#2B95D1"></app-icon>
+                <span>
+                    {{ title }}
+    
+                </span>
+                <button class="close-btn" (click)="toggle()">
+                    <app-icon icon="plus" rotate="45deg" color="#00B0EB"></app-icon>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ng-content></ng-content>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+        
+    
+    </div>
+</section>
+<!-- END MODAL -->
+
+
+<!-- IF DIALOG -->
+<section *ngIf="type==='dialog'&& visible" > 
+
+    <div class="dialog-container w-full h-full flex justify-center items-center md:top-0" [@appear]>
+        <div 
+            class="modal-content mx-auto p-2 w-80"
+            >
+            <div class="modal-header py-1">
+                <app-icon *ngIf="icon" 
+                    [icon]="icon" 
+                    color="#2B95D1" 
+                    size="0.8rem"
+                    class="inline-block mx-2"
+                    ></app-icon>
+                <span>
+                    {{ title }}    
+                </span>
+                <button class="close-btn" (click)="toggle()">
+                    <app-icon icon="plus" rotate="45deg" color="#00B0EB"></app-icon>
+                </button>
+            </div>
+            <div class="dialog-body p-2">
+                <p>
+                    {{ content }}
+                </p>
+            </div>
+            <div class="dialog-footer flex justify-end">
+                <!-- TODO: Generar funciones de los botones con output  -->
+                <app-button skin="secondary-btn" class="mx-1"(click)="cancelButton()">Cancelar</app-button>
+                <app-button skin="secondary-btn" class="mx-1"(click)="acceptButton({title,content, accept:true})">Aceptar</app-button>
+            </div>
+        </div>
+        
+    
+    </div>
+</section>
+<!-- END MODAL -->

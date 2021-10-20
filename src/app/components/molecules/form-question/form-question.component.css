@@ -1,0 +1,9 @@
+.yo-pregunto h2{
+    background-color: var(--preguntas);
+    color:#fff;
+    border-radius: var(--border-radius);
+}
+
+h2{
+    color:var(--titles-gray)
+}

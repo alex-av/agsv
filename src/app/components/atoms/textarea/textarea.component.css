@@ -1,0 +1,23 @@
+.textarea-container textarea{
+    background-color: transparent;
+    border:1px solid var(--blue_light);
+    border-radius: var(--border-radius);
+    min-height: 6rem;
+    color:var(--dark-input-font-color);
+    font-family:var(--light-font);
+    font-size: var(--font-size-content);
+
+}
+
+.textarea-container textarea.light{
+    color:var(--text-gray);
+    background-color: #ececec;
+}
+
+
+.textarea-container.light .label{
+    font-size: var(--font-size-content);
+    color: var(--text-gray);
+    font-family:var(--light-font);
+
+}

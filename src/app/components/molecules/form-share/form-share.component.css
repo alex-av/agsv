@@ -1,0 +1,9 @@
+.yo-comparto h2{
+    background-color: var(--compartido);
+    color:#fff;
+    border-radius: var(--border-radius);
+}
+
+h2{
+    color:var(--titles-gray)
+}

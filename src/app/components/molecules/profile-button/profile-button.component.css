@@ -1,0 +1,32 @@
+/* Component profile button */
+.profile-button {
+    border: 1px solid var(--blue_text);
+    border-radius: var(--border-radius);
+    width: 18.43rem;
+    box-sizing: border-box;
+    height: 4.84rem;
+    margin: 0.6rem; /* by default */
+}
+
+.pointer {
+    cursor:pointer;
+
+}
+
+.profile-button picture{
+    width: 3.8rem;
+    height: 3.8rem;
+
+}
+.profile-button picture img{
+    border-radius: var(--border-radius);
+    border: 1px solid var(--blue_text);
+    max-width: 100%;
+    height: auto;
+}
+
+.button-label{
+    color: var(--blue_text)
+}
+
+/* End Component profile button */

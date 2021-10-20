@@ -1,0 +1,46 @@
+<div class="profile-button
+flex
+p-2
+items-center
+"
+[ngClass]="isButton()"
+>
+
+<!-- Image -->
+<picture class="mr-2">
+    <source 
+        media="(min-width: 780px)" 
+        [srcset]="'/assets/img/' + profile + '@2x.png'">
+
+    <img 
+        [src]="'/assets/img/'+ profile +'.png'" alt="">
+</picture>
+
+<!-- End Image -->
+
+<!-- Button label -->
+<div class="button-label 
+    mr-2
+    flex-grow
+    ">
+    {{ profile }}
+</div>
+
+<!-- End Button label -->
+
+<!-- icon -->
+<div *ngIf="arrow"  
+    class="icon-container relative mr-1">
+    <app-icon 
+    icon="right-arrow"
+    color="#C4E5FF">
+    </app-icon>
+</div>
+<!-- end icon -->
+<!-- 
+    TODO: - [ ] Agregar estados del botón perfil
+    TODO: - [ ] Agregar animación / comportamiento de interacción
+
+
+ -->
+</div>

@@ -1,0 +1,24 @@
+<div class="public-post-container">
+    <div class="responsive-container px-5 py-2">
+        <!-- 
+            <app-select
+                placeholder="Selecciona el tipo de publicación *"
+                [required]="true"
+                [items]="[{name:'Yo pregunto'},{name:'Comparto'}]"
+            ></app-select>
+
+         -->
+
+
+    
+        <div class="form-post-question" *ngIf="formPost==='yo-pregunto'">
+            <app-form-question></app-form-question>
+        </div>
+        
+        <div class="form-post-share" *ngIf="formPost==='yo-comparto'">
+            <app-form-share></app-form-share>
+        </div>
+
+    </div>
+
+</div>

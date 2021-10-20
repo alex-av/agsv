@@ -1,0 +1,16 @@
+<div class="icon-item-container flex items-center py-4 px-5">
+    <div class="main-icon p-2">
+        <app-icon [icon]="icon" color="#00B0EB"></app-icon>
+    </div>
+    <div class="item-info ml-2">
+        <div class="date py-1 " *ngIf="!noHeader">
+            <app-post-date
+                [date]="date"
+                [time]="time"
+            ></app-post-date>
+        </div>
+        <h3 class="title-car py-1">{{ title }}</h3>
+        <!-- TODO: Acortar con pipe -->
+        <p class="info-summary py-1" *ngIf="summary"> {{ summary }} </p>
+    </div>
+</div>

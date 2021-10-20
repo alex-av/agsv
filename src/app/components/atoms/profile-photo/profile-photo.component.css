@@ -1,0 +1,31 @@
+
+/* Profile Photo Commponent*/
+
+.profile-photo.mobile-photo{
+    width: 38px;
+    height: 38px;
+    overflow: hidden;
+
+}
+
+.profile-photo.mobile-photo.x2{
+    width: 92px;
+    height: 92px;
+    border-width: 0.4rem;
+}
+    /*Temporal*/
+   
+
+    .profile-photo.productor,.profile-photo.productora{
+        border: 0.2em solid var(--productor);
+    }
+    .profile-photo.extensionista{
+        border: 0.2em solid var(--extensionista);
+    }
+    .profile-photo.investigador,.profile-photo.investigadora{
+        border: 0.2em solid var(--investigador);
+    }
+    /*End Temporal*/
+/* End Profile Photo Component*/
+
+

@@ -1,0 +1,78 @@
+<div class="menu-container fixed h-full top-0 left-0" *ngIf="visible" >
+    <div class="side-menu-container p-4 h-full absolute" [@sideX]>
+
+    <div class="menu-header flex items-center" >    
+
+        <app-profile-photo
+            src="/assets/img/profile-photo/user/Rectangle@2x.png"
+            category="investigador"
+            size="2x"         
+            
+        ></app-profile-photo>
+        <div class="userName">
+            <h3>Juan Perez Ramirez Lopez</h3>
+            <app-tag 
+                category="investigador"
+            ></app-tag>
+
+        </div>
+    </div>
+    <nav class="side-menu-nav">
+        <ul>
+            <li (click)="goto('v12')">
+                <app-icon icon="user" [color]="color" class="menu-icon"></app-icon>
+                <app-link url="#" class="inline-block py-4">Ver mi perfil</app-link>
+            </li>
+
+            <li (click)="goto('v16')">
+                <app-icon icon="notification-filled" [color]="color" class="menu-icon"></app-icon>
+                <app-link url="#" class="inline-block py-4">Notificaciones</app-link>
+            </li>
+
+            <hr>
+
+            <li (click)="goto('v7')">
+                <app-icon icon="ask" [color]="color" class="menu-icon"></app-icon>
+                <app-link url="#" class="inline-block py-4">Pregunto</app-link>
+            </li>
+
+            <li (click)="goto('v8')">
+                <app-icon icon="answer" [color]="color" class="menu-icon"></app-icon>
+                <app-link url="#" class="inline-block py-4">Respondo</app-link>
+            </li>
+
+            <li (click)="goto('v9')">
+                <app-icon icon="share" [color]="color" class="menu-icon"></app-icon>
+                <app-link url="#" class="inline-block py-4">Comparto</app-link>
+            </li>
+
+            
+            <hr>
+            
+            <li (click)="goto('v15')">
+                <app-icon icon="user" [color]="color" class="menu-icon"></app-icon>
+                <app-link url="#" class="inline-block py-4">Usuarios Conectados</app-link>
+            </li>
+            <li (click)="goto('v13')">
+                <app-icon icon="ranking" [color]="color" class="menu-icon"></app-icon>
+                <app-link url="#" class="inline-block py-4">Ranking</app-link>
+            </li>
+            
+            <li (click)="goto('v14')">
+                <app-icon icon="plus" rotate="45deg" [color]="color" class="menu-icon"></app-icon>
+                <app-link url="#" class="inline-block py-4">Cerrar Sesión</app-link>
+            </li>
+            
+        </ul>
+    </nav>
+
+    <div class="menu-footer absolute bottom-5">
+        <img src="/assets/img/logo.png" alt="logos">
+    </div>
+
+
+
+</div>
+</div>
+
+<div class="menu-layout fixed h-full w-full top-0 left-0" *ngIf="visible" (click)="closeMenu()"></div>

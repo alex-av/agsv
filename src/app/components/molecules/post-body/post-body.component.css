@@ -1,0 +1,29 @@
+.post-title{
+    color: var(--titles-gray);
+}
+
+.post-summary{
+    color:var(--text-gray);
+    font-size:var(--font-size-content);
+    font-family: var(--light-font);
+    text-align: justify;
+    line-height: 1.1rem;
+}
+
+
+.link-answers{
+    font-family: var(--light-font);
+}
+
+.imagen-container img{
+    border-radius: var(--border-radius);
+}
+
+.quick-answer-form{
+    border-top:1px solid var(--post-border)
+}
+
+video{
+    display: block;
+    margin: auto;
+}

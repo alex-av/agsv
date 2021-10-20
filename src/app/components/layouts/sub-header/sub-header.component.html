@@ -1,0 +1,21 @@
+<div class="sub-header p-2.5 text-left" [@appear]>
+    <div class="options-button-container" (click)="contextMenu(true)">
+        <span> {{ title }} </span>
+    
+        <span>
+            <app-icon 
+                icon="down-arrow"
+                color="#82868A"
+                >
+            </app-icon>
+    
+        </span>
+    </div>
+    <app-context-menu
+        [visible]="show"
+        (imVisible)="contextMenu($event)"
+        top="2.8rem"
+        left="2.2rem"
+        [items]="options"
+        ></app-context-menu>
+</div>

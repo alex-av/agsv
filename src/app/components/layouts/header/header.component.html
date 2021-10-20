@@ -1,0 +1,56 @@
+    <!-- Layout Header -->
+    <header class="header 
+        flex
+        items-center
+        p-2
+        ">
+
+        <button *ngIf="backButtonUrl" class="mt-1.5 mr-2" (click)="backFunction(backButtonUrl)">
+            <app-icon icon="tick-arrow" rotate="-90deg" color="#00B0EB" size="1.4rem" ></app-icon>
+        </button>
+
+        <!-- Profile Photo  -->
+        <app-profile-photo
+            *ngIf="photoUrl"
+            class="ml-2"
+            [src]="photoUrl"
+            [category]="category"
+            (click)="goto('v17')"
+        ></app-profile-photo>
+            <!-- TODO: Revisar función goto porque es temporal -->
+        <!-- End Profile photo -->
+
+        <!-- Title -->
+        <div class="title flex-grow"> {{title}} </div>
+        <!-- End Title -->
+
+        <!-- Header Icons -->
+        <!-- TODO: Hacer router más eficiente -->
+        <div class="icon-tools mr-4" (click)="goto('v16')">
+
+            <!-- Icons group -->
+            <ng-content></ng-content>
+            <!-- End Icon group -->
+
+        </div>
+        <!-- End Header Icons -->
+
+        <div class="logo-mini mr-3">
+            <img src="/assets/img/logo-header.svg" alt="">
+        </div>
+
+        <app-context-button
+            [options]="[ 
+            { name: 'Mis Preguntas'}, 
+            { name: 'Mis Respuestas'},
+            { name: 'Mis compartidos', url:''}, 
+            { name: 'Cerrar Sesión', fn:closeSession, params:['param1', 'param2', 420] }
+            ]"
+            right="0"
+            top="3.6rem"
+         >
+        
+        </app-context-button>
+    </header>
+
+    <!-- End Layout Header -->

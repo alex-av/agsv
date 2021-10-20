@@ -1,0 +1,78 @@
+
+        <div class="form-container px-10 pt-5">
+            <app-input 
+                inputId="Nombre"
+                type="text"
+                Labelcontent="Nombre"
+                theme="light"
+                class="mb-8 mt-10 block"
+                _formControlName="name"
+                >
+            </app-input>
+    
+            <app-input 
+            inputId="Perfil"
+            type="text"
+            Labelcontent="Perfil"
+            theme="light"
+            class="mb-4 block"
+            _formControlName="profile"
+            >
+            </app-input>
+    
+            <div class="flex justify-between my-6">
+                <app-input 
+                inputId="Profesion"
+                type="text"
+                Labelcontent="Profesión"
+                theme="light"
+                class="mr-1.5"
+                _formControlName="profession"
+                >
+                </app-input>
+        
+                <app-input 
+                inputId="Cargo"
+                type="text"
+                Labelcontent="Cargo"
+                theme="light"
+                class="ml-1.5 "
+                _formControlName="charge"
+                >
+                </app-input>
+    
+    
+            </div>
+    
+            <app-input 
+            inputId="Empresa"
+            type="text"
+            Labelcontent="Empresa"
+            theme="light"
+            class="mb-8 block"
+            _formControlName="company"
+            >
+            </app-input>
+    
+            <app-select 
+                theme="light"
+                [items]="[{
+                    name:'Opción 1'
+                },
+                {
+                    name:'Opción 2'
+                }, 
+                ]"
+            >
+    
+            </app-select>
+
+
+            <div class="footer py-5 mt-4 flex justify-center">
+                <app-button
+                    skin="tertiary-btn"
+                    
+                > Actualizar</app-button>
+            </div>
+
+        </div>

@@ -1,0 +1,24 @@
+.menu-layout{
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 200;
+
+}
+
+.menu-container{
+    z-index: 300;
+}
+.side-menu-container{
+
+    color:var(--titles-gray);
+    width: 300px;
+    box-shadow: 0.2rem 0 0.5rem rgba(0,0,0,0.1);
+    background-color: #fff;
+
+}
+
+
+
+.menu-icon{
+    display: inline-block;
+    padding: 0.5rem;;
+}

@@ -1,0 +1,17 @@
+
+<div class="textarea-container w-full" [class]="theme">
+    <label *ngIf="label" [for]="id" class="label block px-2 pb-2">
+        {{ label }}
+    </label>
+    <textarea 
+        class="block w-full p-3 "
+        [class]="theme"
+        [name]="name"
+        [placeholder]="placeholder" 
+        [id]="id" 
+        [cols]="cols" 
+        [rows]="rows">
+        {{ content }}
+    </textarea>
+
+</div>

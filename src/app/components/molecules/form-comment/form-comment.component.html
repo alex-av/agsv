@@ -1,0 +1,13 @@
+<form action="">
+<div *ngIf="answerBoxVisible"  class="quick-answer-form w-full flex">
+        <app-input
+            [placeholder]="placeholder"
+            size="0.8rem"
+            class="block flex-grow"
+        ></app-input>
+
+        <div class="form-footer flex justify-end  px-2 items-center">
+            <app-button skin="tertiary-btn-compact" type="submit" (click)="sendMessage('answer')"><i class="pi pi-send"></i></app-button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,40 @@
+<div class="buttons-container flex justify-end pt-4 relative">
+
+    <app-button skin="secondary-btn-outline" class="mx-1 profile-button" *ngIf="!visitor">
+        <span class="inline-block mr-2" (click)="follow()">Seguir</span>
+         <app-icon 
+            icon="plus" 
+            color="#2B95D1" 
+            class="
+                transform 
+                translate-y-0.5 
+                inline-block">
+        </app-icon>
+    </app-button>
+    <app-button skin="secondary-btn-outline" class="mx-1 profile-button" *ngIf="!visitor">
+        <span class="inline-block mr-2" (click)="writeMessage($event)">Mensaje</span>
+         <app-icon 
+            icon="message" 
+            color="#2B95D1" 
+            class="
+                transform 
+                translate-y-0.5 
+                inline-block">
+        </app-icon>
+    </app-button>
+    
+
+
+    <app-button skin="secondary-btn-outline" class="mx-1 profile-button" *ngIf="visitor">
+        <span class="inline-block mr-2" (click)="editProfile($event)">Editar</span>
+         <app-icon 
+            icon="edit" 
+            color="#2B95D1" 
+            class="
+                transform 
+                translate-y-0.5 
+                inline-block">
+        </app-icon>
+    </app-button>
+
+</div>

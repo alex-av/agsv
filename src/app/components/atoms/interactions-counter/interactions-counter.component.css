@@ -1,0 +1,42 @@
+.counter-container{
+    text-align: center;
+}
+
+span{
+    display: block;
+}
+
+.counter{
+    font-family: var(--medium-font);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height:1.9;
+    border-radius: 50%;
+    color:#fff;
+    font-size: 0.97rem;
+}
+
+
+
+.label{
+    font-size: var(--font-size-mini);
+    font-family: var(--light-font);
+    color:var(  --nav-gray-color);
+}
+
+.counter,.label{
+    position: relative;
+}
+
+.counter.newContent::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    right: 0;
+    top:-0.2rem;
+    background-color: var(--notification);
+}

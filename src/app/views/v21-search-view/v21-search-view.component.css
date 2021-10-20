@@ -1,0 +1,6 @@
+.empty, .results-area{
+    font-size: var(--font-size-content);
+    font-family: var(--light-font);
+    color:var(--text-gray);
+
+}

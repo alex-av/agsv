@@ -1,0 +1,34 @@
+/*ITEMS USER COMPONENT*/
+.user-status{
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+.user-status.conectado{
+
+    background-color: var(--secondary);
+
+}
+
+
+.user-status.descconectado{
+
+    background-color: var(--titles-gray);
+
+}
+
+.item-user{
+    color:var(--titles-gray);
+    border-bottom: 1px solid var(--post-border);
+}
+.ranking-number{
+    line-height: 0.9;
+}
+.points{
+    font-size: var(--font-size-micro);
+    line-height: 0.7;
+    font-family: var(--light-font);
+}
+
+/*EN ITEM USER COMPONENT*/

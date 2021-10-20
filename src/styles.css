@@ -1,0 +1,49 @@
+@import url( 'variables.css');
+@import url( 'fonts.css' );
+
+/* TAILWIND */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+/* END TAILWIND */
+
+/*PrimeNG*/
+
+
+body, html{
+    display: block;
+    height: 100%;
+}
+
+body, html, h1, h2, h3, h4, h5, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--main-font);
+    background-color: var(--bg-gray);
+}
+
+/* CLASSES */
+
+a.block {
+    display: block;
+}
+
+a.i-block {
+    display: inline-block;
+}
+
+.investigador {
+    background-color: var(--investigador);
+}
+
+.productor {
+    background-color: var(--productor);
+}
+
+.extensionista {
+    background-color: var(--extensionista);
+}

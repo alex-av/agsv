@@ -1,0 +1,47 @@
+<div class="recovery-form-container w-80">
+    <h2 class="
+    w-full 
+    text-center
+    mb-4
+    ">Cambiar contraseña </h2>
+    <div class="notice text-center ">
+        Te recomendamos usar una contraseña de mínimo 8 caracteres que combine números, símbolos y letras
+    </div>
+    <div class="form mt-10">
+        <form action="">
+            <div class="input-layout py-1">
+                <app-input
+                    theme="dark"
+                    Labelcontent="Introduce una nueva contraseña"
+                    id="pass1"
+                    type="password"
+                    [required]="true"
+                    
+    
+                ></app-input>
+
+            </div>
+
+            <div class="input-layout py-1">
+
+                <app-input
+                    theme="dark"
+                    Labelcontent="Vuelve a escribir tu nueva contraseña"
+                    id="pass1"
+                    type="password"
+                    [required]="true"
+    
+                    ></app-input>
+
+            </div>
+            <div class="button-layout flex justify-center mt-10">
+                <app-button
+                    type="submit"
+                > Cambiar</app-button>
+        
+            </div>
+            
+        </form>
+
+    </div>
+</div>

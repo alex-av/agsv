@@ -1,0 +1,8 @@
+.profile-info{
+    color:var(--titles-gray)
+}
+
+.info-container,.city-location{
+    font-family: var(--light-font);
+    font-size: var(--font-size-mini);
+}

@@ -1,0 +1,65 @@
+<div class="form-question-component mt-3">
+
+
+    <div class="divisor flex flex-wrap items-center yo-comparto">
+            
+        <h2 class="pl-1.5 pr-3 py-2 transform translate-y-1.5 inline-block"> 
+            <app-icon icon="ask" size="0.9rem" color="#fff" class="mr-1"></app-icon>
+            Yo comparto
+        </h2>
+        
+    </div>
+
+
+    <div class="divisor flex flex-wrap items-center mt-4">
+        <app-icon icon="share-outline" size="1.2rem" color="#00B0EB"></app-icon>
+        <h2 class="mb-3 ml-3 transform translate-y-1"> Comparte Video, Fotos o Audio </h2>
+        
+    </div>
+    <hr>
+
+    <div class="media-buttons flex py-2">
+        <button class="block p-2">
+            <app-icon icon="mic" color="#2B95D1"></app-icon>
+        </button>
+        <button class="block p-2">
+            <app-icon icon="camera" color="#2B95D1"></app-icon>
+        </button>
+        <button class="block p-2">
+            <app-icon icon="image" color="#2B95D1"></app-icon>
+        </button>
+    </div>
+    
+    <app-input
+        type="text"
+        theme="light"
+        placeholder="Título de la publicación"
+        size="0.8rem"
+        _formControlName="question"
+        class="-mt-5 block"
+    ></app-input>
+    <app-textarea
+        theme="light"
+        label="Descripción"
+        elemId="pregunta"
+        
+        
+    >
+    </app-textarea>
+
+    <div class="divisor flex flex-wrap items-center mt-4">
+    <app-icon icon="tag" size="1.2rem" color="#00B0EB"></app-icon>
+    <h2 class="mb-3 ml-3 transform translate-y-1"> Agrega Etiquetas</h2>
+    
+</div>
+<hr>
+    <app-autocomplete 
+    [multiple]="true"
+    label="Etiquetas del post"
+></app-autocomplete>
+
+    <div class="form-footer flex justify-end py-2 items-center mt-2">
+        <app-button skin="tertiary-btn-compact" type="button" class="mr-2">Cancelar </app-button>
+        <app-button skin="tertiary-btn-compact" type="submit">Compartir </app-button>
+    </div>
+</div>

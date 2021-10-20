@@ -1,0 +1,19 @@
+<div class="
+    toast-container
+    w-full
+    " 
+    [ngClass]="{ fixed :floating}" 
+    [class.top]="top"
+    [class.left]="left"
+    [class.right]="right"
+    [class.bottom]="bottom"
+    *ngIf="visible"
+    [@appear]
+    
+    >   
+    <div class="toast-message text-center py-2 px-8" [ngClass]="color">
+        {{ message }}
+        <button class="closeButton" (click)="closeToast()"> <i class="pi pi-times"></i></button>
+    </div>
+
+</div>

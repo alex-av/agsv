@@ -1,0 +1,7 @@
+.profile-about{
+    color:var(--titles-gray)
+}
+.profile-about .description{
+    font-family: var(--light-font);
+    font-size: var(--font-size-content);
+}

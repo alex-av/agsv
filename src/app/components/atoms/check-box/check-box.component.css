@@ -1,0 +1,13 @@
+label{
+    color: var(--blue_text);
+}
+::ng-deep .p-checkbox-box{
+    border:2px solid var(--blue_text);
+    width:1.3rem;
+    border-radius: var(--border-radius);
+    height:1.3rem;
+}
+
+::ng-deep .p-checkbox-icon{
+    color:var(--blue_text)
+}

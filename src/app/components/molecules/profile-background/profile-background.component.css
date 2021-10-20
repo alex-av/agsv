@@ -1,0 +1,14 @@
+/*
+component profile-background
+*/
+.profile-background{
+
+    overflow: hidden;
+    background-color: #ccc
+
+}
+
+.profile-background img{
+    width: 100%;
+    height: auto;
+}

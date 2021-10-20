@@ -1,0 +1,60 @@
+<section class="post-header
+    flex
+    items-center
+    relative
+">
+
+    <div class="user-photo-container" (click)="clickUserPhoto($event)">
+
+        <app-profile-photo 
+            [src]="userPhoto"
+            [category]="category"
+        >
+        </app-profile-photo>
+
+    </div>
+        
+    <div class="userdata-container">
+        
+        <h3 class="w-full username leading-4" (click)="clickUserName($event)">
+            {{ userName }}
+        </h3>
+
+
+        <div class="tag-post-date-container flex items-center">
+            
+            <!-- Profile Tag -->
+            <app-tag [category]="category" class="pr-1">
+    
+            </app-tag>
+    
+            <!-- End Profile Tag -->
+    
+            <!-- Post Date Component -->
+            <app-post-date
+                class="mt-1"
+                [date]="date"
+                [time]="time"
+            ></app-post-date>
+            <!-- End Post Date component -->
+        
+        </div>
+
+    </div>
+
+    <div class="card-submenu absolute -right-5">
+        <app-context-button
+            [options]="options"
+            right="0.8rem"
+            top="2rem"
+            
+            >
+        
+        </app-context-button>
+    </div>
+
+
+
+
+    
+</section>

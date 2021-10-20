@@ -1,0 +1,29 @@
+<nav class="navbar-container">
+    <ul class="flex justify-center">
+        <li class="px-3 py-3 mx-1 item-1" [ngClass]="evalItem(1)">
+            <app-link class="text-center block" (click)="goto('feeds',1)">
+                <app-icon size="1.4rem" icon="home" [color]="evalItem(1) === 'selected' ? selected : color " [ngClass]="evalItem(1)"></app-icon>
+                <span class="item-label w-full block" >Inicio</span>
+            </app-link>
+        </li>
+        <li class="px-3 py-3 mx-1 item-2" [ngClass]="evalItem(2)">
+            <app-link class="text-center block" (click)="goto('v7',2)">
+                <app-icon size="1.4rem" icon="ask-outline" [color]="evalItem(2) === 'selected' ? selected : color " [ngClass]="evalItem(2)"></app-icon>
+                <span class="item-label w-full block">Mis preguntas</span>
+            </app-link>
+        </li>
+        <li class="px-3 py-3 mx-1 item-3" [ngClass]="evalItem(3)">
+            <app-link class="text-center block" (click)="goto('v8',3)">
+                <app-icon size="1.4rem" icon="check-outline" [color]="evalItem(3) === 'selected' ? selected : color " [ngClass]="evalItem(3)"></app-icon>
+                <span class="item-label w-full block" >Mis respuestas</span>
+            </app-link>
+        </li>
+        <li class="px-3 py-3 mx-1 item-4" [ngClass]="evalItem(4)">
+            <app-link class="text-center block" (click)="goto('v9',4)">
+                <app-icon size="1.4rem" icon="share-outline" [color]="evalItem(4) === 'selected' ? selected : color " [ngClass]="evalItem(4)"></app-icon>
+                <span class="item-label w-full block" >Compartido</span>
+            </app-link>
+        </li>
+    </ul>
+</nav>
+<!-- TODO: Revisar rutas temporales -->

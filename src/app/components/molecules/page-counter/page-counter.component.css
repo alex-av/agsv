@@ -1,0 +1,14 @@
+span{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin: 0.5em;
+    border-radius: 50%;
+    background-color: var(--blue_text);
+    opacity: 0.5;
+
+}
+
+span.active{
+    opacity:1;
+}

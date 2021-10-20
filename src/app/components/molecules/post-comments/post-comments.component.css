@@ -1,0 +1,19 @@
+.post-comments-container{
+    color:var(--text-gray);
+    border-top: 1px solid var(--comment-border);
+
+    background-color: var(--bg-gray);
+}
+.post-comments-container:last-child{
+    border-bottom: 1px solid var(--comment-border);
+}
+.comment{
+    font-size: var(--font-size-mini);
+    font-family: var(--light-font);
+}
+
+.content-message-container span.user{
+    font-family: var(--light-font);
+    font-size: var(--font-size-mini);
+    color: var(--primary);
+}

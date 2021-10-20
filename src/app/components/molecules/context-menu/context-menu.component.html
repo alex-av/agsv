@@ -1,0 +1,23 @@
+<div
+*ngIf="visible" 
+class="context-menu-container"
+[style.top]="top"
+[style.right]="right"
+[style.left]="left"
+[style.bottom]="bottom"
+[@appear]
+
+
+>
+<ul>
+    <li *ngFor="let item of items; let i= index" (click)=" item.fn ? fnObject(item) : item.url ? gotoUrl(item.url): warning() ">
+        <app-link 
+            class="px-3 
+            py-1 block" 
+            [size]="0.7"
+            
+            > {{ item.name }}</app-link>
+    </li>
+</ul>
+<div class="layout" (click)="changeVisibility()"></div>
+</div>

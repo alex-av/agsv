@@ -1,0 +1,9 @@
+<figure class="thumbnail-container w-14" [ngClass]="mediaType">
+    <!-- TODO: Alts ??? -->
+    <img [src]="src ? src :'/assets/img/audio_thumbnail.png'" alt="Thumbnail">
+    <app-icon 
+    [icon]="options[mediaType]" 
+    color="#fff"
+    class="mini-icon"
+    ></app-icon>
+</figure>

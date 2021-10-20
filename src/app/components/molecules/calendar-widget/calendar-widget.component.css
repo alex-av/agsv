@@ -1,0 +1,41 @@
+::ng-deep .p-calendar{
+    font-family: var(--light-font);
+    color:var(--titles-gray);
+    border:1px solid var(--post-border);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+
+}
+
+::ng-deep .p-datepicker-today{
+    color:var(--primary);
+
+}
+
+::ng-deep .p-datepicker-calendar td>span{
+    padding: 0.5rem;
+    text-align: center;
+}
+
+::ng-deep .p-datepicker-calendar>thead{
+    color:var(--primary);
+}
+
+::ng-deep .p-datepicker td>.p-highlight{
+    background-color: var(--primary);
+    color:#fff;
+    display: block;
+    font-family: var(--titles-font);
+    border-radius: var(--border-radius);
+
+}
+
+::ng-deep .p-datepicker-title{
+    padding:0.4rem 0.1rem;
+    margin-bottom: 0.4rem;
+}
+
+::ng-deep .p-datepicker-other-month span{
+    opacity: 0.5;
+}

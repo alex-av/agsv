@@ -1,0 +1,39 @@
+
+.toast-container {
+    z-index: 100;
+    position: relative;
+}
+
+.toast-message{
+    background-color: white;
+    font-size: var(--font-size-mini);
+    font-family: var(--light-font);
+    color: var(--text-gray);
+}
+
+.red{
+    background-color: var(--notification);
+    color:white
+}
+.blue{
+    background-color: var(--blue_light);
+    color:white
+}
+.green{
+    background-color: var(--secondary);
+    color:whitesmoke
+}
+.yellow{
+    background-color: var(--investigador);
+    color:var(--text-gray)
+}
+.white{
+    background-color: #fff;
+    color:var(--text-gray)
+}
+
+.closeButton{
+    position: absolute;
+    right: 0.6rem;
+
+}

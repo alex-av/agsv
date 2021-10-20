@@ -1,0 +1,81 @@
+
+        <div class="pt-2 subheader-2 pl-9 pb-2">
+            <span class="inline-block">Pregunta:</span>
+        </div>
+        
+        <!-- post -->
+        <app-post
+    
+        userPhotoUrl="/assets/img/profile-photo/user/Rectangle@2x.png"
+        userName="José Romero"
+        userCategory="extensionista"
+        postTime="2:00 p.m."
+        postDate="Hoy"
+        postCategory="pregunta"
+        postTitle="Título de la publicación"
+        [noTags]="true"
+        content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, esse incidunt. Expedita esse eaque, quis optio, adipisci qui amet ducimus reprehenderit, recusandae temporibus similique ratione deleniti deserunt animi quisquam. Sapiente.
+        Pariatur nobis earum doloremque esse voluptatum. 😂"
+        [nAnswers]="1"
+        [replyButton]="false"
+        [limitText]="60"
+        [noRating]="true"
+        [noIcons]="true"
+        
+        
+            
+        >
+        </app-post>
+
+        <!-- End post -->
+        <div class="pt-2 subheader-2 pl-9 pb-2">
+            <span class="inline-block">Tu respuesta:</span>
+        </div>
+
+            <!-- Post ansewrs -->
+    
+            <app-answers
+            [rating]="120"
+            [votes]="110"
+            userPhoto="/assets/img/profile-photo/user/Rectangle@2x.png"
+            userName="Juan Pérez"
+            userCategory="productor"
+            answerDate="Hoy"
+            answerTime="2:12 p.m."
+            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius facere iusto unde repudiandae numquam deserunt perferendis harum blanditiis dicta. Quo ea dicta "
+            [replyButton]="false"
+            > 
+            
+        
+            
+            
+            </app-answers>
+
+
+        
+            <!-- end Post answers -->
+
+            <div class="pt-2 subheader-2 pl-9 pb-2">
+                <span class="inline-block">Comentarios:</span>
+            </div>
+        <app-post-comments
+            userPhoto="/assets/img/profile-photo/user/Rectangle@2x.png"
+            userName="Juan Pérez"
+            userCategory="productor"
+            date="Hoy"
+            time="2:12 p.m."
+            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius "
+        >
+        
+        </app-post-comments>
+        <app-post-comments
+            userPhoto="/assets/img/profile-photo/user/her.png"
+            userName="Lina Romero"
+            userCategory="extensionista"
+            date="Hoy"
+            time="2:12 p.m."
+            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius "
+        >
+        
+        </app-post-comments>
+        <!-- TODO: Crear respuesta compacta -->

@@ -1,0 +1,22 @@
+
+<div class="label" [class]="theme" *ngIf="label">
+    {{ label }}
+</div>
+
+
+    <p-autoComplete
+        (onSelect)="selected(input)"
+        [suggestions]="results"
+        (completeMethod)="search($event)"
+        [multiple]="multiple"
+        #input
+        class="autocomplete"
+        [class]="type"
+        [ngClass]="theme"
+        [id]="id"
+        [name]="name"
+    
+    
+    ></p-autoComplete>
+
+

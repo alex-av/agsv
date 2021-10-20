@@ -1,0 +1,58 @@
+<app-cancel-reg-buttons
+(onGoBack)="goBack('authentication/sign-in')"
+(onCancelReg)="cancelReg('authentication/login')"
+></app-cancel-reg-buttons>
+
+        <h2 class="
+            w-full 
+            text-center
+            mb-10
+            ">Elige tu perfil</h2>
+
+
+        <!-- Profile Button -->
+        <div class="profile-button-container">
+
+            <app-profile-button (click)="goto('authentication/profile-config/investigador')"
+                profile="Investigador">
+            </app-profile-button>
+    
+            <app-profile-button (click)="goto('authentication/profile-config/extensionista')"
+                profile="Extensionista">
+            </app-profile-button>
+            
+            <app-profile-button (click)="goto('authentication/profile-config/productor')"
+                profile="Productor">
+            </app-profile-button>
+
+        </div>
+        
+        <!-- End Profile Button -->
+
+        <footer class="absolute w-full bottom-10 left-0 right-0">
+
+            <!-- Footer link  -->
+            <!-- <app-link 
+                color="#C4E5FF"
+                display='block'
+                class="w-full text-center"
+                > 
+                Configura tu perfil
+                <app-icon 
+                icon="right-arrow"
+                color="#C4E5FF"
+                class="ml-2 "
+                >
+                </app-icon>
+            </app-link> -->
+            <!-- end footer link -->
+
+            <!-- Pagination counter -->
+            <app-page-counter
+                class="p-1"
+                [dots]="3"
+                [page]="2"
+            ></app-page-counter>
+            <!-- end Pagination counter -->
+
+        </footer>

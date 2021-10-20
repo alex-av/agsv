@@ -1,0 +1,41 @@
+
+            <div class="subtitle-header py-3 px-5">
+                <h3>Mi Ranking</h3>
+            </div>
+            <!-- Layout container -->
+            <section class="layout-container">
+                
+                <!-- USER ITEM  -->
+                <app-user-item
+                    [ranking]="25"
+                    [points]="125"
+                    userPhoto="/assets/img/profile-photo/user/her.png"
+                    userName="Andrea Molano"
+                    userStatus="conectado"
+                    category="investigadora"
+
+                > 
+                </app-user-item>
+
+                <!-- END USER ITEM -->
+
+                <app-sub-header title="Ver Todos" >
+                </app-sub-header>
+
+                    <!-- USER ITEM  -->
+                <app-user-item
+                    [ranking]="1"
+                    [points]="1250"
+                    userPhoto="/assets/img/profile-photo/user/her.png"
+                    userName="Anna M. Silvera"
+                    userStatus="desconectado"
+                    category="extensionista"
+
+                    > 
+                </app-user-item>
+
+                <!-- END USER ITEM -->
+
+
+            </section>
+            <!-- End Layout container -->

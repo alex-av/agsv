@@ -1,0 +1,26 @@
+
+                <div class="item-user flex items-center pl-4 pr-5 py-3">
+
+    
+                    <div class="rank text-center mr-2" *ngIf="!noIcon">
+                        <span class="ranking-number block">{{ ranking }}</span>
+                        <app-icon icon="ranking" color="#00B0EB"></app-icon>
+                        <span class="points block">{{ points }} pts</span>
+                    </div>
+    
+                    <div class="item-user-content items-center flex flex-grow justify-between">
+                        <app-profile-photo
+                            [src]="userPhoto"
+                            [category]="category"                       
+                        ></app-profile-photo>
+                        <div class="name-and-category flex-grow ">
+                            <div class="p-0 transform translate-y-0.5">{{ userName }}</div>
+                            <app-tag [category]="category" class="block transform -translate-y-0.5"></app-tag>
+                        </div>
+    
+                        <div class="user-status flex items-center" [ngClass]="userStatus" >
+                            <span class="circle inline-block"></span>
+                        </div>
+                    </div>
+    
+                </div>

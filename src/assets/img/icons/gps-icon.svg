@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <filter color-interpolation-filters="auto" id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.486275 0 0 0 0 0.741176 0 0 0 0 0.819608 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Móvil" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-28.000000, -400.000000)" filter="url(#filter-1)">
+            <g transform="translate(28.000000, 400.000000)">
+                <g id="Group-13-Copy" fill="#74B8EE" opacity="0">
+                    <rect id="Rectangle-Copy-4" x="0" y="0" width="12" height="12"></rect>
+                </g>
+                <g id="Fill-2" transform="translate(6.000000, 5.500000) scale(-1, 1) translate(-6.000000, -5.500000) translate(3.000000, 1.000000)" fill="#000000">
+                    <path d="M2.78765475,8.88660786 C2.83537248,8.95752087 2.91491541,9 3,9 C3.08508459,9 3.16462752,8.95752761 3.21233856,8.8866146 C3.89666063,7.85857124 6,4.57249529 6,3.01984918 C6,1.35315109 4.65574315,0 3,0 C1.34425685,0 0,1.35315109 0,3.01984918 C0,4.57249529 2.10333268,7.85857124 2.78765475,8.88660786 Z M2.99999666,1.52841368 C3.53394833,1.52841368 3.96744126,1.96478589 3.96744126,2.50227579 C3.96744126,3.03975896 3.53394833,3.47613116 2.99999666,3.47613116 C2.46605167,3.47613116 2.03255205,3.03975896 2.03255205,2.50227579 C2.03255205,1.96478589 2.46605167,1.52841368 2.99999666,1.52841368 Z" id="Fill-1"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

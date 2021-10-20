@@ -1,0 +1,23 @@
+<div class="
+        subtitle-header 
+        py-3 
+        px-5
+        flex
+        items-center
+        ">
+    <div class="title-icon px-2 mr-2" *ngIf="!noIcon">
+        <app-icon 
+            [icon]="icon" 
+            color="#00B0EB"
+            [size]="iconSize"
+            ></app-icon>
+    </div>
+    <div class="location flex-grow">
+        <h3>{{title}}</h3>
+        <p>{{ location }}</p>
+    </div>
+
+    <div class="ng-content">
+        <ng-content></ng-content>
+    </div>
+</div>

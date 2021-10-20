@@ -1,0 +1,22 @@
+<div class="post-comments-container pl-10 pr-6 py-1 [@appear] ">
+    <div class="flex items-center">
+        <div class="user-photo-container">
+    
+            <app-profile-photo 
+                [src]="userPhoto"
+                [category]="category"
+            >
+            </app-profile-photo>
+        </div>
+    
+        <div class="content-message-container flex-grow ml-1">
+
+            <div class="comment">
+                <span class="user"> {{ userName }}: </span>{{ content }}
+            </div>
+    
+        </div>
+    
+    </div>
+
+</div>

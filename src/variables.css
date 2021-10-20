@@ -1,0 +1,51 @@
+:root {
+    --primary: #2B95D1; /* Main blue */
+    --secondary: rgb(149, 192, 32); /* hex: #9EBE38 */
+    --notification: #E75555; 
+    --blue_bg: #0067B1;
+    --blue_light: #00B0EB;
+    --blue_deg:#0078BE;
+    --blue_text:#C4E5FF;
+    --blue_dark: rgb(0,104,177);
+    --error: rgb(227,0,20);
+    --brown: rgb(104,56,15);
+    --green: #007C3A;
+
+    /* Grises */
+    --bg-gray: #F3F3F3;
+    --titles-gray: #4E565C;
+    --text-gray: #82868A;
+    --post-border:#EEE;
+    --comment-border:#DDD;
+    --nav-gray-color:#848C92;
+    
+    /* Tipo de usuaroi */
+    --productor:  rgb(149, 192, 32); /* hex: #9EBE38 */
+    --investigador:rgb(255, 237, 0); /* hex: #EEE64A */
+    --extensionista: #D78128;
+
+    /* Categorías */
+    --preguntas: rgb(0,123,58); /* hex : #007C3A */
+    --compartido:rgb(0, 177, 235); /* hex: #2B95D1; */
+
+    /* Fonts */
+    --main-font: 'Conv_Ubuntu-Medium';
+    --titles-font: 'Conv_Ubuntu-Bold';
+    --light-font: 'Conv_Ubuntu-Light';
+
+    /* Font size */
+    --font-size: 1rem;
+    --font-size-content:0.8rem;
+    --font-size-mini: 0.7rem;
+    --font-size-micro: 0.6rem;
+
+    /* border-radius: ;*/
+    --border-radius: 4px;
+
+    /* themes */
+    /* light*/
+    /* dark */
+    --dark-border:rgba(255, 255, 255, 0.4);
+    --input-bg:rgba(255,255,255,0.05);
+    --dark-input-font-color: rgba(255, 255, 255, 0.8);
+}

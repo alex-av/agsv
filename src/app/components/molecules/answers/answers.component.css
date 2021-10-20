@@ -1,0 +1,11 @@
+.answer-top-header{
+    font-size:var(--font-size-content);
+    font-family: var(--light-font);
+    color:var(--text-gray);
+    border-bottom:1px solid var( --post-border);
+}
+
+.answers{
+    background-color: var(--bg-gray);
+    border-bottom:1px solid var( --post-border);
+}

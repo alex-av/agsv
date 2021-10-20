@@ -1,0 +1,20 @@
+.profile-tag{
+    background-color:#ccc;
+    font-family: var(--light-font);
+    font-size: 0.7rem;
+    border-radius: var(--border-radius);
+
+}
+
+.profile-tag.productor,.profile-tag.productora{
+    background-color: var(--productor);
+    color: white;
+}
+.profile-tag.extensionista{
+    background-color: var(--extensionista);
+    color: white;
+}
+.profile-tag.investigador,.profile-tag.investigadora{
+    background-color:var(--investigador);
+
+}

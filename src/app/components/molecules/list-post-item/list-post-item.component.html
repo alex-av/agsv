@@ -1,0 +1,84 @@
+<li class="list-post-item">
+    <div class="item-container flex items-center py-3 pl-4 pr-3 justify-between">
+        <!-- Thumbnail -->
+        <app-item-thumbnail 
+        *ngIf="thumbnail"
+        class="ml-1 mr-2 mt-1.5"
+        [mediaType]="postType"
+        [src]="thumbnail"
+        >
+        </app-item-thumbnail>
+        <!-- End Thumbnail -->
+
+        <!-- Content -->
+        <div class="date-content-answer flex-grow">
+            <app-post-date
+                time="02:30 p.m."
+                date="Ayer"
+                [style.color]="'#848C92'"
+                >
+            </app-post-date>
+            
+            <div class="content mt-1" [style.fontSize]="size">
+                
+                <!-- TODO: Truncar textos, crear un pipe -->
+                <h3><!-- TODO; colorear texto de pregunta está muy oscuro -->
+                    {{ question }}
+                </h3>
+            </div>
+
+            <div class="answerRelated mt-1" *ngIf="relatedAnswer">
+                <!-- TODO: Truncar textos, crear un pipe -->
+               Responde a: <app-link [size]="0.7"><span> {{relatedAnswer}} </span> </app-link>
+            </div>
+
+        </div>
+        <!-- End Content -->
+
+        <!-- Counters -->
+        <div class="counters flex mx-2">
+
+            <app-interactions-counter 
+                *ngIf="votesCounter"
+                [count]="votesCounter"
+                color="#007C3A"
+                label="Votes"
+                class="mx-1 mt-2"
+                [notification]="votesNotification"
+            ></app-interactions-counter>
+
+            <app-interactions-counter
+                *ngIf="answerCounter"
+                [count]="answerCounter"
+                color="#2B95D1"
+                label="Respuestas"
+                class="mx-1 mt-2"
+                [notification]="answerNotification"
+                
+            ></app-interactions-counter>
+
+        </div>
+        <!-- End Counters -->
+
+        <!-- Link -->
+
+        <!-- Eliminar ?
+        
+            <div>
+                <app-link class="flex items-center">
+                    <span class="next-button-label">Ver</span> 
+                    <app-icon 
+                        class="px-2"
+                        icon="right-arrow"
+                        [color]="nextIconColor"
+                        ></app-icon>
+                </app-link>
+            </div>
+        
+        
+        -->
+
+        <!-- End Links -->
+
+    </div>
+</li>

@@ -1,0 +1,7 @@
+.bg-blue{
+    background-image: linear-gradient(180deg, var(--blue_light) 2%, var(--blue_deg) 100%);
+}
+
+.light{
+    background-color: #fff;
+}

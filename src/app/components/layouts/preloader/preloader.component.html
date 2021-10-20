@@ -1,0 +1,15 @@
+<div *ngIf="visible" class="preloader-container fixed w-full h-full flex justify-center items-center content-center top-0 left-0 flex-wrap">
+    <div class="logo-container w-full py-4">
+
+        <img src="/assets/img/logo-header.svg" alt="linkata logo" class="block mx-auto">
+
+    </div>
+
+    <p-progressSpinner
+        [style]="{ width:'32px', height:'32px'}"
+        styleClass="custom-spinner"
+        strokeWidth="4px"
+        animationDuration=".5s"
+    ></p-progressSpinner>
+
+</div>

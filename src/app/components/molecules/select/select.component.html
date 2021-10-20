@@ -1,0 +1,22 @@
+<div class="select-container">
+    <p-dropdown
+        [ngClass]="theme"
+        [options]="items"
+        optionLabel="name"
+        [showClear]="true"
+        styleClass="ags"
+        [placeholder]="placeholder"
+        (onChange)="onChange($event.value)"
+        [required]="required"
+        [id]="id"
+
+    ></p-dropdown>
+
+</div>
+
+<!-- 
+    Dropdown component from primeNG
+    Documentation Link
+    https://www.primefaces.org/primeng/showcase/#/dropdown
+
+ -->

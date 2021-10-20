@@ -1,0 +1,10 @@
+.answers-stars{
+    width: 2.375rem;
+}
+.rating{
+    line-height: 0.2rem;
+}
+.votes-counter{
+    font-size: 0.54rem;
+    font-family: var(--light-font);
+}

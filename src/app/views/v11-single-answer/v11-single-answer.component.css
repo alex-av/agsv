@@ -1,0 +1,6 @@
+.subheader-2{
+    border-bottom: 1px solid var(--post-border);
+    font-family: var(--light-font);
+    color: var(--primary);
+    font-size: var(--font-size-content);
+}

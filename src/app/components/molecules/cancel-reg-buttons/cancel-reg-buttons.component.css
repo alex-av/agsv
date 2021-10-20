@@ -1,0 +1,6 @@
+.auth-header-register button{
+    display: block;
+    font-size: var(--font-size-content);
+    color:var(--blue_text);
+    font-family: var(--light-font);
+}

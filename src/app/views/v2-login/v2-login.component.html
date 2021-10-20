@@ -1,0 +1,45 @@
+
+    <div class="w-full justify-center flex flex-wrap">
+        
+        <!-- Login form Molecule -->
+            <!-- Temporal routing -->
+            <app-login-form></app-login-form>
+
+        <!-- END Login form Molecule -->
+    
+        <!-- Social Login Molecule -->
+        <app-social-login class="mt-4 w-full"></app-social-login>
+        <!-- END Social Login Molecule-->
+    
+    
+        <!-- Create Account  -->
+        <app-link
+            class="w-full text-center mt-4 mb-5" 
+            url="#"
+            display="block"
+            classes="light"
+            [size]="1"
+        > Crear cuenta </app-link>
+        <!-- END Create Account -->
+
+            <!-- Footer Logos -->
+<div  class="logos 
+flex
+items-center
+justify-center
+w-full
+md:absolute
+md:bottom-8
+">
+    
+    <figure class="w-32 lg:w-48">
+        <img src="../assets/img/logo-agro.png" alt="Logo Agrosavia">
+    </figure>
+
+    <figure class="w-32 lg:w-48">
+        <img src="../assets/img/logo-min.png" alt="Logo Agrosavia">
+    </figure>
+</div>
+<!-- END Footer Logos -->
+
+</div>

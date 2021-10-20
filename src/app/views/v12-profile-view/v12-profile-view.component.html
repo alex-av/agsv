@@ -1,0 +1,84 @@
+
+            <section class="layout-container user-profile-general-info pb-4">
+
+                <app-profile-background
+                    imageUrl="/assets/img/profile-photo/user/profile-bg/Rectangle.png"
+                    alt="My Background Image"
+                ></app-profile-background>
+
+
+                
+                <div class="profile-container relative w-10/12 mx-auto">
+                    <!-- Profile Photo -->
+                    <app-profile-photo
+                        src="/assets/img/profile-photo/user/Rectangle.png"
+                        category="{{ getCategoryName(profile.UserType.Name) }}"
+                        size="2x"
+                        class="absolute -top-12"
+    
+                    ></app-profile-photo>
+                    <!-- END Profile Photo  -->
+    
+                    <!-- Buttons Row -->
+                        
+                    <app-profile-buttons-row
+                        [visitor]="false"
+                    >
+                        
+                    </app-profile-buttons-row>
+
+                    <!-- END Buttons Row -->
+    
+                    <!-- Profile info -->
+                    <app-profile-info
+                        userName="Juan Perez Ramirez"
+                        category="{{ getCategoryName(profile.UserType.Name) }}"
+                        [ranking]="6"
+                        [comments]="50"
+                        location="{{ profile.Location.City.Name}},{{ profile.Location.State.Name}}"
+                    >
+
+                    </app-profile-info>
+                    <!-- end Profile info -->
+    
+                    <!-- About -->
+                    <app-profile-about
+                        userName="Mí"
+                        userDescription="Me gusta viajar, la música, el cine, los animales , la naturaleza, eventualmente soy fotógrafo ."
+                    ></app-profile-about>
+
+                    <!-- End About -->
+                </div>
+                
+            </section>
+
+            <section class="layout-container user-profile-posts">
+
+                <app-post *ngFor="let post of sharedPosts"
+                    userPhotoUrl="/assets/img/profile-photo/user/Rectangle@2x.png"
+                    postVideoUrl="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Big_Buck_Bunny_4K.webm/Big_Buck_Bunny_4K.webm.360p.vp9.webm"
+                    videoPoster="/assets/img/posts/Rectangle@2x.png"
+                    userName="{{post.Profile.User.FullName}}"
+                    [votes]="post.Like"
+                    userCategory="{{post.Profile.UserType.Name | lowercase}}"
+                    postTime="{{post.CreatedAt | date:'shortTime'}}"
+                    postDate="{{post.CreatedAt | date }}"
+                    postCategory="{{ setCatgory(post.Category.Name) }}"
+                    postTitle="{{post.Title}}"
+                    [tags]="tagsToArray(post.Tags)"
+                    content="{{ post.Description}}"
+                    [nAnswers]="post.ResponsesLenght"
+                    [nLikes]="post.Like"
+                    [rating]=" calcRaiting(post)"
+                    postType ="pregunta"
+                    [options]="[{ name: 'Opción 1'},{ name: 'Ver detalle'}]"
+                    [replyButton]="replyButton"
+                    [seeMoreComments]="{ route:true, url:'post/'+post.Id }"
+                >
+                
+                </app-post>
+
+
+
+            </section>
+

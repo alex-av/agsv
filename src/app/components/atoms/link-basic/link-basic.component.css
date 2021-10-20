@@ -1,0 +1,11 @@
+a.light{
+    color: #C4E5FF;
+    font-family: var(--light-font);
+    font-size: 0.8rem;
+}
+a.line{
+    display: inline-block;
+}
+a.block{
+    display: block;
+}

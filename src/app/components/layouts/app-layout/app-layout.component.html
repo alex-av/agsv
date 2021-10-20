@@ -1,0 +1,98 @@
+<!-- Views:
+
+
+-->
+
+<app-container  >
+    
+    <div class="header w-full fixed top-0 z-10" [@slideY]>
+        <!-- Header -->
+        <app-header
+            
+            photoUrl="/assets/img/profile-photo/user/Rectangle@2x.png"
+            category="productor"
+            title="Publicaciones"
+            (onClickPhoto)="sideMenuVisibility(true)"
+        >
+    
+            <app-link>
+                <app-icon 
+                    icon="notification"
+                    color="#2B95D1"
+                    class="mx-1"
+                    [notification]="true"
+                    ></app-icon>
+            </app-link>
+    <!-- 
+
+            <app-link>
+                <app-icon 
+                    icon="search"
+                    color="#2B95D1"
+                    class="mx-1">
+                </app-icon>
+            </app-link>
+
+
+     -->
+    
+        </app-header>
+        <!-- End Header -->
+    </div>
+    
+    <app-layout-container>
+        <!-- Toast -->
+        <app-toast [visible]="false" color='red'></app-toast>
+        <!-- end Toast -->
+<!--=====================================================================-->
+        <router-outlet></router-outlet>
+<!--=====================================================================-->
+
+    </app-layout-container>
+
+
+    <!-- NavBar -->
+    <footer class="z-20 w-full fixed bottom-0" [@slideYUp]>
+        <app-navbar
+
+            [itemSelected]="3"
+        ></app-navbar>
+
+    </footer>
+    <!-- end NavBar -->
+
+
+    <!-- Create Post Button & Modal -->
+    <div class="create-new-button">
+        
+        <app-floating-button [visible]="showFloatingButton"></app-floating-button>
+
+
+        <app-modal 
+            #modal 
+            title="Title"
+            type="dialog"
+            icon="ask"
+            width="200px"
+            [visible]="false"
+            content="Este es el texto del dialog"
+            (onAccept)="getDialogInfo($event)"
+           >
+
+            <!-- forms -->
+            <!-- <app-form-question></app-form-question>
+            <app-form-share></app-form-share> -->
+            <!-- endForms -->
+
+            
+        </app-modal>
+
+
+
+    </div>
+    <!-- end Create Post Button & Modal -->
+</app-container>
+
+
+<app-preloader [visible]="isLoadding"></app-preloader>
+<app-side-menu [visible]="sideMenu" (menuVisible)="sideMenuVisibility($event)"></app-side-menu>

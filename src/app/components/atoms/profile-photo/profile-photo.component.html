@@ -1,0 +1,20 @@
+    <div class="
+    profile-photo 
+    rounded-full
+    mobile-photo
+    mr-2
+    "
+    [class.x2]="size==='2x'"
+    [ngClass]="category"
+
+    >
+    <picture>
+    <!-- 
+    <source 
+    media="(min-width:780px)"
+    srcset="/assets/img/profile-photo/user/Rectangle@2x.png"
+    >
+    -->
+    <img [src]="src" alt="">
+    </picture>
+    </div>

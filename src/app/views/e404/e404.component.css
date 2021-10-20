@@ -1,0 +1,17 @@
+.e404-container{
+    font-family: var(--light-font);
+    color: var(--titles-gray);
+    background-color: #fff;
+
+}
+.big-icon{
+    font-size: 4rem;
+    color: var(--notification)
+
+
+}
+
+h1{
+    font-size: 2rem;
+    color:var(--notification)
+}

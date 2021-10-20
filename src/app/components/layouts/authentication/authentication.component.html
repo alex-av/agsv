@@ -1,0 +1,32 @@
+<app-container bg="bg-blue" >
+
+    <div class="home-view 
+    flex
+    flex-wrap
+    justify-center 
+    content-start
+    w-full 
+    h-full
+    pb-16
+    ">
+
+    <div class="logo-cont w-full flex justify-center" [@slideY]>
+        
+        <!-- Main Logo -->
+        <app-main-logo class="
+        main-logo
+        mt-20
+        mb-5
+        ">
+        </app-main-logo>
+        <!-- End of Main Logo -->
+    </div>
+
+<!-- =============================================================================== -->
+        <router-outlet></router-outlet>
+<!-- =============================================================================== -->
+
+    </div>
+
+
+</app-container>

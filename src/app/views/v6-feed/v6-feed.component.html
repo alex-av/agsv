@@ -1,0 +1,71 @@
+
+        <!-- Sub-header -->
+        <app-sub-header 
+            title="Todas las publicaciones"
+            [options]="[{name:'Todos'}, {name:'Investigadores'}, {name:'Extensionistas'}, {name:'Productores'}, {name:'Departamentos'}]"
+        ></app-sub-header>
+        <!-- End Subheader -->
+
+        <!-- post -->
+        <app-post *ngFor="let post of posts"
+            userPhotoUrl="/assets/img/profile-photo/user/Rectangle@2x.png"
+            postVideoUrl="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Big_Buck_Bunny_4K.webm/Big_Buck_Bunny_4K.webm.360p.vp9.webm"
+            videoPoster="/assets/img/posts/Rectangle@2x.png"
+            userName="{{post.Profile.User.FullName}}"
+            [votes]="post.Like"
+            userCategory="{{post.Profile.UserType.Name | lowercase}}"
+            postTime="{{post.CreatedAt | date:'shortTime'}}"
+            postDate="{{post.CreatedAt | date }}"
+            postCategory="{{ setCatgory(post.Category.Name) }}"
+            postTitle="{{post.Title}}"
+            [tags]="tagsToArray(post.Tags)"
+            content="{{ post.Description}}"
+            [nAnswers]="post.ResponsesLenght"
+            [nLikes]="post.Like"
+            [rating]=" calcRaiting(post)"
+            postType ="pregunta"
+            [options]="[{ name: 'Opción 1'},{ name: 'Ver detalle'}]"
+            [gotoProfile]="{ route:true, url:'profile/'+post.Profile.Id } "
+            [gotoPost]="{ route:true, url:'posts/response/'+post.Id } "
+            [seeMoreComments]="{ route:true, url:'post/'+post.Id }"
+            >
+            <!-- @Input() gotoProfile:AppButtons = this.appButton.blank;
+            @Input() gotoPost:AppButtons = this.appButton.blank;
+            @Input() likeButton:AppButtons = this.appButton.blank;
+            @Input() upVote:AppButtons=this.appButton.blank;
+            @Input() downVote:AppButtons=this.appButton.blank;
+            @Input() seeMoreComments:AppButtons=this.appButton.blank; -->
+            <!-- Post ansewrs -->
+
+            <app-post
+                userPhotoUrl="/assets/img/profile-photo/user/Rectangle@2x.png"
+                userName="{{post.PostResponse.Profile.User.FullName}}"
+                [rating]="120"
+                [noTags]="true"
+                postType="respuesta"
+                [votes]="post.PostResponse.Like"
+                userCategory="{{post.PostResponse.Profile.UserType.Name | lowercase}}"
+                [replyButton]="true"
+                postTime="2:00 p.m."
+                postDate="Hoy"
+                [nAnswers]="1"
+                [nLikes]="1"
+                content="{{ post.PostResponse.Description }}"
+                [gotoPost]="{ route:true, url:'posts/' }"
+                [gotoProfile]="{ route:true, url:'posts/'+post.Profile.Id }"
+            >
+
+  <!-- @Input() gotoProfile:AppButtons = this.appButton.blank;
+  @Input() gotoPost:AppButtons = this.appButton.blank;
+  @Input() likeButton:AppButtons = this.appButton.blank;
+  @Input() upVote:AppButtons=this.appButton.blank;
+  @Input() downVote:AppButtons=this.appButton.blank;
+  @Input() seeMoreComments:AppButtons=this.appButton.blank; -->
+            </app-post>
+    
+            <!-- end Post answers -->
+    
+            
+            
+        </app-post>
+        <!-- end post -->

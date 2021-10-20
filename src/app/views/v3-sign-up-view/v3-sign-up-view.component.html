@@ -1,0 +1,151 @@
+
+
+
+        <app-cancel-reg-buttons
+            (onGoBack)="goBack('authentication/login')"
+            (onCancelReg)="cancelReg('myUrl')"
+        ></app-cancel-reg-buttons>
+
+        <h2 class="
+        w-full 
+        text-center
+        ">Registro de Usuario</h2>
+
+
+        <!-- Layout  -->
+        <div class="w-80 justify-center flex flex-wrap items-center">
+                <!-- nombre -->
+                <app-input 
+                    class="w-full"
+                    theme="dark"
+                    Labelcontent="Nombres y Apellidos"
+                    type="text"
+                    [error]="false"
+                    formControlName="fullName"
+                    id="Nombre">
+                </app-input>
+                <!-- End nombre -->
+
+                <!-- Date Gender container -->
+                <div class="flex items-center w-full">
+                    <app-input 
+                        theme="dark"
+                        icon="calendar-dark"
+                        Labelcontent="Fecha de Nacimiento"
+                        type="date"
+                        id="Fecha"
+                        formControlName="BDate"
+                        >
+                    </app-input>
+                    
+                    <app-select
+                    class="w-40 mx-2"
+                    theme="dark"
+                    placeholder="Género"
+                    [items]="[{ name:'Femenino'},{name:'Masculino'}]"
+                    (getValue)="getValue($event)"
+                    ></app-select>
+                    
+                </div>
+                <!-- end Date Gender Container -->
+                
+                <!-- Mail input -->
+                <app-input 
+                    class="w-full"
+                    theme="dark"
+                    Labelcontent="Correo"
+                    type="mail"
+                    formControlName="email"
+                    id="Correo">
+                </app-input>
+                <!-- End Mail Input -->
+
+                <!-- Location inputs -->
+                <div class="flex items-center w-full">
+                    <app-select
+                    class="w-80 "
+                    theme="dark"
+                    [items]="[{name:'Género'},{ name:'Femenino'},{name:'Masculino'}]"
+                    placeholder="Departamento"
+                    (getValue)="getValue($event)"
+                    ></app-select>
+
+                    <app-select
+                    class="w-80 ml-2 "
+                    theme="dark"
+                    [items]="[{name:'Género'},{ name:'Femenino'},{name:'Masculino'}]"
+                    placeholder="Ciudad"
+                    (getValue)="getValue($event)"
+                    ></app-select>
+                    
+                </div>
+                <!-- End location Inputs -->
+
+
+                <app-check-box
+                    label="Acepto términos y condiciones"
+                    chkId="t&c"
+                    name="Términos"
+                ></app-check-box>
+
+                <footer class="absolute w-full bottom-10 left-0 right-0">
+
+                    <!-- Footer link  -->
+                    <app-link 
+                        color="#C4E5FF"
+                        display='block'
+                        class="w-full text-center"
+                        > 
+                        Elige tu perfil
+                        <app-icon 
+                        icon="right-arrow"
+                        color="#C4E5FF"
+                        class="ml-2 "
+                        >
+                        </app-icon>
+                    </app-link>
+                    <!-- end footer link -->
+        
+                    <!-- Pagination counter -->
+                    <app-page-counter
+                        class="p-1"
+                        [dots]="3"
+                        [page]="1"
+                    ></app-page-counter>
+                    <!-- end Pagination counter -->
+        
+                </footer>
+
+        </div>
+        <!-- end layout -->
+        <footer class="absolute w-full bottom-10 left-0 right-0">
+
+            <!-- Footer link  -->
+            <app-link 
+                color="#C4E5FF"
+                display='block'
+                class="w-full text-center"
+                (click)="nextStep()"
+                > 
+                Elije tu perfil
+                <app-icon 
+                icon="right-arrow"
+                color="#C4E5FF"
+                class="ml-2 "
+                >
+                </app-icon>
+            </app-link>
+            <!-- end footer link -->
+
+            <!-- Pagination counter -->
+            <app-page-counter
+                class="p-1"
+                [dots]="3"
+                [page]="1"
+            ></app-page-counter>
+            <!-- end Pagination counter -->
+
+        </footer>
+
+
+

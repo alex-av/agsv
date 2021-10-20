@@ -1,0 +1,13 @@
+<button class="context-button inline-block p-2" (click)="contextMenu(true)">
+    <i class="pi pi-ellipsis-v"></i>
+</button>
+
+<app-context-menu
+[visible]="show"
+(imVisible)="contextMenu($event)"
+[top]="top"
+[right]="right"
+[left]="left"
+[bottom]="bottom"
+[items]="options"
+></app-context-menu>

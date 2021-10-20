@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 4</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="vote_component" transform="translate(-6.000000, 0.000000)">
+            <g id="Group-4" transform="translate(6.000000, 0.000000)">
+                <rect id="Rectangle-Copy-8" fill="#74B8EE" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                <g id="Fill-8" transform="translate(1.000000, 7.000000)" fill="#2B95D1">
+                    <path d="M9.63164577,5.00719936 L15.6540721,-3.17701018 C16.2279618,-3.95680019 16.0716081,-5.06404023 15.3051605,-5.64800013 C14.538702,-6.23196002 13.4505257,-6.07286874 12.8766468,-5.2929684 C12.8766468,-5.2929684 8.11967714,1.17152172 6.562624,3.28747994 C5.81253819,4.3067895 5.81245145,5.70714585 6.56240714,6.72656573 C8.11749773,8.84040568 12.8643402,15.292815 12.8643402,15.292815 C13.4381323,16.0727595 14.5262869,16.2319832 15.2928213,15.6481557 C16.0593449,15.0643171 16.2158287,13.9571102 15.6420366,13.1771547 L9.63164577,5.00719936 Z" id="Fill-1" transform="translate(11.000000, 5.000000) rotate(-270.000000) translate(-11.000000, -5.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

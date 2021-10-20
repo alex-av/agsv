@@ -1,0 +1,56 @@
+<section class="answers">
+
+    <!-- answers container -->
+    <section class="answers-container flex px-9 pt-5">
+    <!-- answers stars --> 
+        <app-answer-stars
+            [rating]="rating"
+            [votes]="votes"
+        >
+
+        </app-answer-stars>
+
+    <!-- end answers stars -->
+        
+
+        <div class="post-components-container">
+
+            <!-- answer header -->
+                <app-post-header
+                    *ngIf="!noHeaders"
+                    [userPhoto]="userPhoto"
+                    [userName]="userName"
+                    category="userCategory"
+                    [date]="answerDate"
+                    [time]="answerTime"
+
+                ></app-post-header>
+            <!-- end answer header -->
+
+            <!-- answer body -->
+                <app-post-body
+                    [content]="content"
+                    [replyButton]="replyButton"
+                    buttonInfo="Responder"
+                    [nLikes]="1"
+                    [nAnswers]="2"
+                ></app-post-body>
+            <!-- end answer body -->
+
+        </div>
+        
+    
+    
+    </section>
+
+    <!-- end answers container -->
+
+    
+</section>
+
+
+<!-- answers -->
+<div class="post-content-answers">
+    <ng-content></ng-content>    
+</div>
+<!-- end answers -->

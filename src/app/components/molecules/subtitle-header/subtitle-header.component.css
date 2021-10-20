@@ -1,0 +1,16 @@
+/*MI RANKING*/
+.subtitle-header{
+    background: var(--bg-gray);
+    color:var(--titles-gray);
+}
+
+
+
+.location{
+    font-size: var(--font-size-content);
+}
+.location p{
+    font-family: var(--light-font);
+    font-size: var(--font-size-mini);
+}
+/*END MI RANKING*/

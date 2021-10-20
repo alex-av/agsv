@@ -1,0 +1,64 @@
+<div class="form-question-component mt-3">
+ 
+
+        <div class="divisor flex flex-wrap items-center yo-pregunto">
+            
+            <h2 class="pl-1.5 pr-3 py-2 transform translate-y-1.5 inline-block"> 
+                <app-icon icon="ask" size="0.9rem" color="#fff" class="mr-1"></app-icon>
+                Yo pregunto
+            </h2>
+            
+        </div>
+
+
+    
+    <app-input
+        type="text"
+        theme="light"
+        placeholder="Escríbe tu pregunta"
+        size="0.8rem"
+        id="pregunta-input"
+        _formControlName="question"
+    ></app-input>
+    
+    <app-textarea
+    theme="light"
+    label="Añade descripción"
+    id="pregunta"
+    class="mt-4 block"
+    rows="8"
+    
+    
+    >
+</app-textarea>
+
+<div class="divisor flex flex-wrap items-center mt-2">
+    <app-icon icon="tag" size="1.2rem" color="#00B0EB"></app-icon>
+    <h2 class="mb-3 ml-3 transform translate-y-1"> Agrega Etiquetas</h2>
+    
+</div>
+<hr>
+<app-autocomplete
+    [multiple]="true"
+    label="Etiquetas del post"
+></app-autocomplete>
+
+    <div class="form-footer flex justify-between py-2 px-2 items-center">
+        <div class="media-buttons flex">
+            <button class="block p-2">
+                <app-icon icon="mic" color="#2B95D1"></app-icon>
+            </button>
+            <button class="block p-2">
+                <app-icon icon="camera" color="#2B95D1"></app-icon>
+            </button>
+            <button class="block p-2">
+                <app-icon icon="image" color="#2B95D1"></app-icon>
+            </button>
+        </div>
+        <div class="buttons flex justify-end">
+            <app-button skin="tertiary-btn-compact" type="button" class="mr-2">Cancelar </app-button>
+            <app-button skin="tertiary-btn-compact" type="submit" class="ml-2">Publicar </app-button>
+
+        </div>
+    </div>
+</div>

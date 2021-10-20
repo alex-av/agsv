@@ -1,0 +1,90 @@
+div{
+    position: relative;
+}
+input {
+    display: block;
+    font-family: var(--light-font);
+    font-size: 1rem;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+label{
+    font-size: 0.82rem;
+    font-family: var(--light-font);
+    position: absolute;
+    display: block;
+    top: 0.1rem;
+    transition: transform 0.2s ease-out;
+}
+
+label.labelFilled {
+    transform: translateY(-1.4rem);
+}
+
+div.dark input{
+    background-color: var(--input-bg);
+    border: none;
+    border-bottom: 1px solid var(--dark-border);
+    color: var(--blue_text);
+}
+
+div.dark label{
+    color: var(--dark-input-font-color);
+}
+
+
+
+div.dark input:focus,
+div.dark input:active{
+    border: 1px solid rgba(255,255,255, 0.4);
+    outline:none;
+    background-color: transparent!important;
+}
+
+
+.inner-icon{
+
+    position: absolute;
+    top:1.7rem;
+    left: 1rem;
+
+}
+
+
+/*Light*/
+
+div.light label{
+    color: var(--text-gray);
+
+}
+div.light input{
+    background-color: var(--bg-gray);
+    border: none;
+    border-bottom: 1px solid var(--blue_light);
+    color: var(--text-gray);
+
+}
+
+
+/*Chrome icon*/
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator
+{
+    color:white;
+    -webkit-appearance: none;
+    position: absolute;
+    left:-1rem ;
+    opacity: 0;
+    width: 90%;
+    
+    
+}
+
+/*Errors*/
+div.error input{
+    border: 1px solid var(--error);
+}
+
+div.error label{
+    color:var(--error)
+}

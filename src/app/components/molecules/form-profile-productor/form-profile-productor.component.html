@@ -1,0 +1,51 @@
+<section class="form-productor" *ngIf="visible">
+    <form action="">
+        <app-select
+            [items]="[{name:'Profesión1'}, {name:'Profesión2'}]"
+            placeholder="Profesión"
+            theme="dark"
+            id="profesion"
+            class="my-4 block"
+            >
+        </app-select>
+
+        <app-select
+            [items]="[{name:'Ocupación1'}, {name:'Ocupación2'}]"
+            placeholder="Ocupación"
+            id="ocupacion"
+            class="my-4 block"
+            theme="dark">
+        </app-select>
+
+        <app-check-box
+            label="Pertene a algunación asociación o gremio"
+            chkId="asociacion"
+            (onCheck)="getValue($event)"
+        ></app-check-box>
+
+        <app-input 
+            Labelcontent="Escríbala"
+            type="text"
+            theme="dark">
+        </app-input>
+
+        <app-autocomplete 
+            label="Sistemas productivos de interés"
+            theme="dark"
+            [data]="['sistema 1', 'sistema 2']"
+            [multiple]="true"
+            ></app-autocomplete>
+
+        <app-autocomplete 
+            label="Temáticas en las que tiene mayor fortaleza"
+            theme="dark"
+            [data]="['temática 1', 'temática 2']"
+            [multiple]="true"
+            ></app-autocomplete>
+
+            <footer class= "bottom-10 w-full flex justify-center left-0 right-0 mt-10 mb-5">
+                <app-button type="submit">Unirme</app-button>
+            </footer>
+    </form>
+</section>
+

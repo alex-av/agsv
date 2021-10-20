@@ -1,0 +1,98 @@
+
+            
+            <!-- post -->
+            <app-post
+                userPhotoUrl="/assets/img/profile-photo/user/Rectangle@2x.png"
+                postVideoUrl="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Big_Buck_Bunny_4K.webm/Big_Buck_Bunny_4K.webm.360p.vp9.webm"
+                videoPoster="/assets/img/posts/Rectangle@2x.png"
+                userName="{{post.Profile.User.FullName}}"
+                [votes]="post.Like"
+                userCategory="{{post.Profile.UserType.Name | lowercase}}"
+                postTime="{{post.CreatedAt | date:'shortTime'}}"
+                postDate="{{post.CreatedAt | date }}"
+                postCategory="{{ setCatgory(post.Category.Name) }}"
+                postTitle="{{post.Title}}"
+                [tags]="tagsToArray(post.Tags)"
+                content="{{ post.Description}}"
+                [nAnswers]="post.ResponsesLenght"
+                [nLikes]="post.Like"
+                [rating]=" calcRaiting(post)"
+                postType ="pregunta"
+                [options]="[{ name: 'Opción 1'},{ name: 'Ver detalle'}]"
+                [replyButton]="replyButton"
+                [seeMoreComments]="{ route:true, url:'post/'+post.Id }"
+            >
+        
+                <!-- Post ansewrs -->
+            <!-- 
+
+                <app-post
+                    userPhotoUrl="/assets/img/profile-photo/user/Rectangle@2x.png"
+                    userName="Juan Pérez"
+                    [rating]="120"
+                    [noTags]="true"
+                    postType="respuesta"
+                    [votes]="110"
+                    userCategory="extensionista"
+                    [replyButton]="true"
+                    postTime="2:00 p.m."
+                    postDate="Hoy"
+                    [nAnswers]="1"
+                    [nLikes]="1"
+                    content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius facere iusto unde repudiandae numquam deserunt perferendis harum blanditiis dicta. Quo ea dicta ">
+    
+                </app-post>
+
+            -->
+
+ 
+                <!-- end Post answers -->
+        
+        
+                
+            </app-post>
+            
+            <app-post-comments
+                userPhoto="/assets/img/profile-photo/user/Rectangle@2x.png"
+                userName="Jon Doe McEnz"
+                category="investigador"
+                date = '12 May'
+                time = '2:00 p.m'
+                content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius facere iusto und "
+
+            ></app-post-comments>
+
+            <!-- TODO: La idea es que sea un elemento que se alimenta de un array
+            
+            <app-post-comments *ngFor="let comment of comments"
+                [userPhoto]="comment.userPhoto"
+                [userName]="comment.userName"
+                [category]="comment.category"
+                [date]="comment.date"
+                [time]="comment.time"
+                [content]="comment.content"
+
+            ></app-post-comments>
+            
+            -->
+            <!-- Divisor -->
+            <div class="divisor"></div>
+
+
+                <app-post
+                    postType="respuesta"
+                    userPhotoUrl="/assets/img/profile-photo/user/Rectangle@2x.png"
+                    userName="José Romero"
+                    userCategory="productor"
+                    postTime="2:00 p.m."
+                    postDate="Hoy"
+                    [noTags]="true"
+                    content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, esse incidunt. Expedita esse eaque, quis optio, adipisci qui amet ducimus reprehenderit, recusandae temporibus similique ratione deleniti deserunt animi quisquam. Sapiente.
+                    Pariatur nobis earum doloremque esse voluptatum. 😂"
+                    [nAnswers]="1"
+                
+                ></app-post>
+            
+            <app-single-post-form></app-single-post-form>
+            <!-- End post -->
+            <!-- TODO: Crear respuesta compacta -->

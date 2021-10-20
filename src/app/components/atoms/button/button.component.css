@@ -1,0 +1,58 @@
+button {
+    display: block;
+}
+button.primary-btn{
+    color: #fff;
+    background-color: var(--secondary);
+    border-radius: var(--border-radius);
+    padding: 1.3rem 2rem;
+    text-transform: uppercase;
+    font-family: var(--titles-font);
+}
+
+
+button.secondary-btn{
+    color:var(--primary);
+    font-size: var(--font-size-content);
+    border:1px solid var(--primary);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+
+
+/* TODO: Añadir comportamiento */
+button.secondary-btn-outline{
+    color:var(--primary);
+    font-size: 0.9rem;
+    border:1px solid var(--primary);
+    padding: 0.5rem 1.1rem;
+    border-radius: var(--border-radius);
+}
+
+button.tertiary-btn{
+    background-color: var(--primary);
+    color:#fff;
+    font-family: var(--light-font);
+    font-size: var(--font-size);
+    padding: 0.6rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+button.tertiary-btn-compact{
+    background-color: var(--primary);
+    color:#fff;
+    font-family: var(--light-font);
+    font-size: var(--font-size-content);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--border-radius);
+}
+
+button.small-white-btn{
+    background-color:#fff;
+    color:var(--primary);
+    padding: 0.3rem 0.8rem;
+    font-size: var(--font-size-content);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 0 rgba(0,0,0,0.1);
+}

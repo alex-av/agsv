@@ -1,0 +1,74 @@
+<section class="form-extensionista" *ngIf="visible">
+    <form action="">
+        <app-select
+            [items]="[{name:'Profesión1'}, {name:'Profesión2'}]"
+            placeholder="Nivel Académico"
+            theme="dark"
+            id="ext-nivel-academico"
+            class="my-4 block"
+            >
+        </app-select>
+        <app-select
+            [items]="[{name:'Profesión1'}, {name:'Profesión2'}]"
+            placeholder="Profesión"
+            theme="dark"
+            id="ext-profesion"
+            class="my-4 block"
+            >
+        </app-select>
+        
+        <app-input 
+            Labelcontent="Título de postgrado"
+            type="text"
+            id="ext-titulo"
+            theme="dark">
+        </app-input>
+
+        <app-select
+            [items]="[{name:'Ocupación1'}, {name:'Ocupación2'}]"
+            placeholder="Ocupación"
+            id="ext-ocupacion"
+            class="my-4 block"
+            theme="dark">
+        </app-select>
+        
+        <app-select
+            [items]="[{name:'Entidad1'}, {name:'Entidad2'}]"
+            placeholder="Entidad"
+            id="ext-entidad"
+            class="my-4 block"
+            theme="dark">
+        </app-select>
+
+
+        <app-select
+        [items]="[{name:'Risaralda'}, {name:'Caldas'} ,{name:'Quindío'}, {name:'Tolima'}, {name:'Chocó'}, {name:'Cundinamarca'}]"
+        placeholder="Departamento(s) en el que presta servicio de extensión"
+        theme="dark"
+        id="ext-departamentos"
+        class="my-4 block"
+        >
+        </app-select>
+
+        <app-autocomplete 
+            label="Sistemas productivos de interés"
+            theme="dark"
+            [data]="['sistema 1', 'sistema 2']"
+            [multiple]="true"
+            id="ext-sistemas"
+            ></app-autocomplete>
+
+
+        <app-autocomplete 
+            label="Temáticas en las que tiene mayor fortaleza"
+            theme="dark"
+            [data]="['temática 1', 'temática 2']"
+            [multiple]="true"
+            id="ext-tematicas"
+            ></app-autocomplete>
+            <footer class= "bottom-10 w-full flex justify-center left-0 right-0 mt-10 mb-5">
+                <app-button type="submit">Unirme</app-button>
+            </footer>
+
+    </form>
+</section>

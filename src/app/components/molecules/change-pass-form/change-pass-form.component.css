@@ -1,0 +1,9 @@
+h2 {
+    color: var(--blue_text)
+}
+
+.notice{
+    font-family: var(--light-font);
+    color: var(--blue_text);
+    font-size: var(--font-size-content);
+}

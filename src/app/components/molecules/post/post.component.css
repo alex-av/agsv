@@ -1,0 +1,51 @@
+
+.post-container{
+    border-bottom:1px solid var( --post-border);
+
+
+}
+
+.borders{
+    border-left:1px solid var( --post-border);
+    border-right:1px solid var( --post-border);
+    box-shadow: 0 1rem 1rem 0 rgba(0,0,0,0.05);
+}
+.pregunta{
+    background-color: #fff;
+}
+
+.respuesta{
+    background-color: var(--bg-gray);
+}
+
+.tag-category{
+    border-radius: var(--border-radius);
+}
+.tag-category.pregunta{
+    background-color: var(--preguntas);
+    color: #fff;
+}
+.tag-category.compartido{
+    background-color: var(--compartido);
+    color: #fff;
+}
+
+.post-tags{
+    font-size: 0.7rem;
+    font-family: var(--light-font)
+}
+
+li.items{
+    background-color: var(--bg-gray);
+    border-radius: var(--border-radius);
+    color:var(--primary)
+}
+
+
+.subheader-2{
+    border-bottom: 1px solid var(--post-border);
+    font-family: var(--light-font);
+    color: var(--primary);
+    font-size: var(--font-size-content);
+    background-color: var(--bg-gray);
+}

@@ -1,0 +1,14 @@
+.sub-header{
+    background-color: var(--bg-gray);
+    font-family: var(--light-font);
+    color: var(--text-gray);
+}
+
+.options-button-container{
+    cursor: pointer;
+    display: inline-block; 
+}
+
+.sub-header span {
+    font-size: 0.7rem; 
+}

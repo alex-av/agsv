@@ -1,0 +1,111 @@
+<section [@fadeInOut] class="post-container flex px-9 pt-5 borders" [ngClass]="postType">
+<!-- answers stars --> 
+    <app-answer-stars
+    *ngIf="!noRating"
+    [rating]="rating"
+    [votes]="votes"
+    (onUpVote)="appButton.AppButtonInteraction(upVote)"
+    (onDownVote)="appButton.AppButtonInteraction(downVote)"
+
+    >
+
+    </app-answer-stars>
+
+<!-- end answers stars -->
+<div class="post-content">
+
+    <!-- Post Header -->
+    <app-post-header
+    *ngIf="!noHeaders"
+    [userPhoto]="userPhotoUrl"
+    [userName]='userName'
+    [category]='userCategory'
+    [date]='postDate'
+    [time]='postTime' 
+    (onClickUserName)="appButton.AppButtonInteraction(gotoProfile)"
+    (onClickUserPhoto)="appButton.AppButtonInteraction(gotoProfile)"
+    [options]="options"
+    >
+
+    </app-post-header>
+
+    <!-- End post header -->
+
+    <!-- Post tags -->
+
+    <section class="post-tags" *ngIf="!noTags"> 
+
+        <div class="tags">
+            <ul class="flex flex-wrap items-center">
+                <li class="pinned item-post-category flex mt-1 mr-1 items-center">
+                    <div class="tag-category pl-2 pr-3" [ngClass]="postCategory">
+                        <app-icon 
+                        [icon]="icon(postCategory)" 
+                        color="#fff"
+                        size="0.5rem"
+                        class="mr-1"
+                        
+                        ></app-icon>
+                        <span>{{ postCategory | titlecase }}</span> 
+                    </div>
+
+                    <!-- tag icon -->
+                    <app-icon 
+                        icon="tag"
+                        [color]="color"
+                        size=" 1.4em"
+                        class="mt-1 ml-1"
+                        >
+                    </app-icon>
+                    <!-- end tag icon -->
+                </li>
+
+                <li *ngFor="let tag of tags; let i= index " class="mt-1 px-2 items mr-1">
+                    <app-link 
+                        [size]="0.7" 
+                        display="inline-block"># {{ tag }}</app-link>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    <!-- end Post tags -->
+
+    <!-- Post body -->
+    <app-post-body
+        [postImageUrl]="postImageUrl"
+        [postVideoUrl]="postVideoUrl"
+        [videoPoster]="videoPoster"
+        [postTitle]="postTitle"
+        [content]="content"
+        [nAnswers]="nAnswers"
+        [nLikes]="nLikes"
+        [replyButton]="replyButton"
+        [buttonInfo]="buttonInfo"
+        [limitText]="limitText"
+        [noIcons]="noIcons"
+        [images]="images"
+        (onClickAnswerButton)="appButton.AppButtonInteraction(gotoPost)"
+        (onClickParagraph)="appButton.AppButtonInteraction(gotoPost)"
+        (onClickTitle)="appButton.AppButtonInteraction(gotoPost)"
+        (onClickLikeButton)="appButton.AppButtonInteraction(likeButton)"
+        
+    >
+        
+    </app-post-body>
+
+    <!-- End Post body -->
+</div>
+</section>
+<!-- answers -->
+<div class="post-content-answers">
+    <ng-content></ng-content>    
+</div>
+
+<div class="pt-2 subheader-2 pl-9 pb-2" *ngIf="nAnswers > 1" (click)="appButton.AppButtonInteraction(seeMoreComments)">
+    <app-link [size]="0.8">
+        <span class="inline-block">Ver {{ nAnswers - 1 }} más</span>
+    </app-link>
+</div>
+
+<!-- end answers -->

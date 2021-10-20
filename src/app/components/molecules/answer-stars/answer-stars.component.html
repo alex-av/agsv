@@ -1,0 +1,19 @@
+<div class="answers-stars flex flex-wrap mr-4 justify-center">
+    <div class="up-vote w-full" (click)="upVote($event)">
+        <app-icon icon="tick-arrow" size="1.6rem" [color]="color" class="block text-center"></app-icon>
+    </div>
+    <div class="stars">
+
+        <app-icon 
+            icon="star" 
+            size="1.4rem" 
+            class="star-icon block text-center"
+            [color]="starColor"
+            ></app-icon>
+        <span class="rating block text-center mt-2">{{ rating }}</span>
+        <span class="votes-counter">{{votes}} votos</span>
+    </div>
+    <div class="x-vote w-full" (click)="downVote($event)">
+        <app-icon icon="tick-arrow" size="1.6rem" [color]="color" class="block text-center transform rotate-180"></app-icon>
+    </div>
+</div>

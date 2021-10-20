@@ -1,0 +1,120 @@
+.label{
+    font-size: var(--font-size-content);
+    font-family: var(--light-font);
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.6rem;
+    color: var(--text-gray);
+}
+
+
+
+:host ::ng-deep .autocomplete .p-autocomplete{
+    background-color: var(--bg-gray);
+    border-bottom: 1px solid var(--blue_light);
+    color: var(--text-gray);
+    font-size: var(--font-size-content);
+    font-family: var(--light-font);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    box-shadow: 0 0 0.3rem 0 inset rgba(0,0,0,0.08);
+    /*Box props*/
+
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    min-height: 3rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+:host ::ng-deep .autocomplete .p-autocomplete ul{
+    width: 100%;
+    padding: 0.3rem;
+
+}
+
+:host ::ng-deep .autocomplete .p-autocomplete-token{
+    background-color: red;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    color:var(--blue_light);
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.08);
+    /*Box props*/
+    padding:0.3rem 0.6rem;
+    display: inline-block;
+    margin-right: 0.4rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
+}
+
+:host ::ng-deep .autocomplete .p-autocomplete-token-label{
+    margin-right: 0.4rem;
+    border-right: 1px solid var(--post-border);
+    padding-right: 0.4rem;
+
+}
+
+
+:host ::ng-deep .autocomplete .p-autocomplete-panel{
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0.3rem 4px 0 rgba(0,0,0,0.08);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+:host ::ng-deep .autocomplete .p-highlight{
+    background-color: var(--primary);
+    color: #fff;
+}
+
+:host ::ng-deep .autocomplete .p-autocomplete-item{
+    padding: 0.6rem 0.6rem;
+    border-bottom: 1px solid var(--post-border);
+
+}
+
+:host ::ng-deep .autocomplete .p-autocomplete-item:last-child{
+    border:none
+}
+
+:host ::ng-deep .autocomplete .p-autocomplete>.p-autocomplete-input{
+    background-color: transparent;
+    width: 100%;
+    outline: 0;
+    padding-left: 0.4rem;
+}
+
+/*
+:host ::ng-deep .autocomplete .p-autocomplete>.p-autocomplete-input:focus{
+    
+}
+
+*/
+
+:host ::ng-deep .autocomplete.dark .p-autocomplete{
+    background-color: var(--input-bg);
+    border: none;
+    border-bottom: 1px solid var(--dark-border);
+    color: var(--blue_text);
+    font-size: var(--font-size-content);
+    font-family: var(--light-font);
+    box-shadow: none;
+    /*Box props*/
+    min-height: 3.4rem;
+
+}
+
+.label.dark{
+    color: var(--blue_text);
+}
+
+
+:host ::ng-deep .autocomplete.dark .p-autocomplete-item{
+    color: var(--text-gray);
+
+}
+
+:host ::ng-deep .autocomplete.dark .p-highlight{
+    background-color: var(--primary);
+    color: #fff;
+}

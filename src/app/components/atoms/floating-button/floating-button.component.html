@@ -1,0 +1,15 @@
+
+    <div class="floating-button-container" *ngIf="visible">
+        <button class="create-button" (click)="createNewPost()">
+            <img src="/assets/img/Create_button.svg" alt="">        
+        </button>
+        <div class="buttons" *ngIf="buttons">
+            <app-button skin="small-white-btn" class="relative bottom-2" (click)="newQuestion()">Preguntar</app-button>
+            <app-button skin="small-white-btn" class="relative top-2" (click)="newPost()">Compartir</app-button>
+        </div>
+        
+        <div class="layout-floating-button fixed top-0 left-0 w-full h-full" *ngIf="buttons">
+    
+        </div>
+    </div>
+    

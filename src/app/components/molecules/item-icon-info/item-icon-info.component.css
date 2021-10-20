@@ -1,0 +1,13 @@
+.icon-item-container{
+    border-bottom: 1px solid var(--post-border);
+}
+.title-car,.info-summary{
+    color:var(--titles-gray);
+}
+.title-car{
+    font-family:var(--main-font);
+} 
+.info-summary{
+    font-family:var(--light-font);
+    font-size: var(--font-size-content);
+}

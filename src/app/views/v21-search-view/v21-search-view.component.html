@@ -1,0 +1,74 @@
+<div class="search-view-container bg-white absolute w-full h-full">
+    
+    <app-header
+        title="Buscar"
+        backButtonUrl="#"
+    ></app-header>
+    <app-layout-container>
+
+    <div class="search-form-container" class="px-4">
+        <form action="" id="search" class="flex items-center">
+            <app-input
+                class="w-full"
+                theme="light"
+                Labelcontent="Introduce tu búsqueda"           
+                type="search"
+            
+            ></app-input>
+            <div class="button-container pl-4 pr-0">
+                <app-button type="submit" skin="secondary-btn" >
+                    <app-icon 
+                        icon="search" 
+                        color="#2B95D1"
+                        size="1.3rem"
+                        ></app-icon>
+                </app-button>
+
+            </div>
+
+        </form>
+    </div>
+    <div class="results-area">
+        <div class="empty text-center py-4">
+            Puedes buscar por usuarios o palabras clave
+        </div>
+
+        <!-- Resultados -->
+        <div class="results px-4">
+            <ul>
+                <li> 
+                    <app-link routerLink="#" [size]="0.9">
+                        <app-item-icon-info
+                        icon="ask"
+                        [noHeader]="true"
+                        title="Nombre de la publicación / pregunta"
+                        summary="Hola cómo estas, claro ! Si deberías hacer esto, por lo general uno …"
+                        ></app-item-icon-info>
+
+
+                    </app-link>
+                </li>
+                <li> 
+                    <app-link routerLink="#" [size]="0.9">
+                        <app-item-icon-info
+                        icon="user"
+                        [noHeader]="true"
+                        title="Nombre del Usuario"
+                    >
+            
+                    </app-item-icon-info>
+                    
+                    </app-link>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+    </app-layout-container>
+
+    
+</div>

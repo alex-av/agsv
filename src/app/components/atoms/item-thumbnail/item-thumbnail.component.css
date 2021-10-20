@@ -1,0 +1,13 @@
+.thumbnail-container{
+    position: relative;
+}
+
+.thumbnail-container img{
+    border-radius:var(--border-radius);
+}
+
+.mini-icon{
+    position: absolute;
+    transform: translateX(2rem) translateY(-1.5rem);
+
+}

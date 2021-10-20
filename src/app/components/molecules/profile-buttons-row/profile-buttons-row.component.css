@@ -1,0 +1,11 @@
+.profile-button{
+    font-family: var(--light-font);
+}
+
+.message-box{
+    background-color: #fff;
+    box-shadow: 0 0 .4em 0 rgba(0,0,0,0.1);
+    border-radius: var(--border-radius);
+}
+
+

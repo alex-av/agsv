@@ -1,0 +1,14 @@
+<section class="profile-info mt-1">
+    <h2>{{userName}}</h2>
+
+    <div class="info-container flex items-center">
+        <app-tag [category]="category"></app-tag>
+        <app-icon class="ml-2 mt-1 mr-1 inline-block" icon="ranking" color="#00B0EB"></app-icon> {{ ranking }}
+        <app-icon class="ml-2 mt-1.5 mr-1 inline-block" icon="comments" color="#00B0EB" size="0.9rem"></app-icon> {{ comments }}
+    </div>
+
+    <div class="location-container flex items-center">
+        <app-icon icon="gps" color="#00B0EB"></app-icon> 
+        <span class="city-location inline-block ml-1">{{ location }}</span>
+    </div>
+</section>

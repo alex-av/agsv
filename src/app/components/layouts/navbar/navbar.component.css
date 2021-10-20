@@ -1,0 +1,33 @@
+.item-label{
+    font-size: 0.7rem;
+    font-family: var(--light-font);
+    color:var(--nav-gray-color);
+}
+
+.navbar-container {
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1rem 16px rgba(0,0,0,0.07);
+    background-color: #fff;
+    
+}
+
+.selected span{
+    color: var(--blue_light);
+}
+li.selected{
+    position: relative;    
+}
+
+li.selected::after{
+    border-radius: 50%;
+    content: '';
+    position:absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--blue_light);
+    display:block;
+    /*TODO: Corregir el renderizado*/
+    left: calc(50% - 0.15rem);
+    bottom:.4rem;
+}

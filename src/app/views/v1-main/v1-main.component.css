@@ -1,0 +1,20 @@
+/* Home-view styles */
+.home-view figure.main-logo {
+    width: 210px;
+    position: relative;
+}
+
+.logos {
+    width: 100%;
+}
+
+
+figure img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* END Home-view styles*/

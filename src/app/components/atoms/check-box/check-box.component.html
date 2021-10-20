@@ -1,0 +1,13 @@
+<div class="checkBoxContainer flex flex-wrap mt-5">
+    <p-checkbox
+        [name]="name"
+        value="val1"
+        [binary]="true"
+        [inputId]="chkId"
+        (onChange)="getValue($event)"
+    ></p-checkbox>
+    <label [for]="chkId" class="p-1 ml-2">
+        {{ label }}
+    </label>
+
+</div>

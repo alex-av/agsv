@@ -1,0 +1,44 @@
+<section class="view-container" *ngIf="visible">
+
+    <div class="chat-header relative top-0 py-2 px-4 flex flex-wrap z-20">
+        <div class="chatwith w-full pb-1">
+            Conversación con: 
+        </div>
+        <div class="user-info w-full flex items-center pt-2">
+            <app-profile-photo
+            src="/assets/img/profile-photo/user/Rectangle.png"
+            category="extensionista"
+            ></app-profile-photo>
+            <div class="userName">
+                John Doe Jackson
+            </div>
+            <!-- Close button -->
+            <button class="absolute right-4" (click)="changeVisibility(false)"><i class="pi pi-times"></i></button>
+            <!-- End close button -->
+        </div>
+    </div>
+    <div class="chat-panel-container chat-panel absolute bottom-20 top-20 px-4  w-full flex flex-wrap items-end">
+        <div class="messages-container w-full ">
+            <div class="message me w-full my-3">
+                <div class="text-container inline-block">
+                    hola
+                </div>
+            </div>
+            <div class="message user w-full my-3">
+                <div class="text-container inline-block">
+                    hola
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="message-box fixed w-full pl-3 pr-1 bottom-0 z-index-100">
+        <div class="blocker-layout">
+            <div class="form-comment-box-container">
+                <app-form-comment 
+                placeholder="Escribe tu Mensaje"    
+                ></app-form-comment>
+            </div>
+        </div>
+    </div>
+</section>

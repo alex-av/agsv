@@ -1,0 +1,113 @@
+<section class="post-body">
+    <!-- MEDIA -->
+
+
+        <div class="gallery pt-2 pb-0" *ngIf="images !== 'none' && !postImageUrl && !postVideoUrl">
+            <app-post-multi-image></app-post-multi-image>
+        </div>
+
+        <div class="imagen-container pt-3 pb-0" *ngIf="postImageUrl && !postVideoUrl" >
+
+            <picture>
+                <source srcset="">
+                <!-- TODO: Ajustar los alts -->
+                <img [src]="postImageUrl" alt="Image">
+            </picture>
+
+        </div>
+        
+
+
+
+
+
+        <div class="video-container pt-2 pb-0" *ngIf="postVideoUrl && !postImageUrl">
+
+            <video [src]="postVideoUrl" [poster]="videoPoster" controls>
+                Este navegador no soporta <code>video</code>
+            </video>
+            <!-- or iframe 
+            
+                <iframe [src]="postVideoUrl" frameborder="0"></iframe>
+            
+            -->
+        </div>
+
+    <!-- end MEDIA -->
+    <div class="content-container mt-2">
+        <h3 class="post-title" (click)="clickTitle($event)">{{postTitle}}</h3>
+        <div class="body mt-1">
+            <div class='post-summary'>
+                <ng-template *ngIf="content.length >=limitText; then limited else fullText "></ng-template>
+
+                <ng-template #limited>
+                    <div (click)="clickParagraph($event)">
+                        <p>
+                            {{ content | slice: 0 : isExpanded ? undefined : limitText }} 
+                        </p>
+                    </div>
+                    <app-link
+                        class="block" 
+                        color="#00B0EB" 
+                        [size]="0.8" 
+                        (click)="isExpanded=!isExpanded">... {{ isExpanded ? 'Ver Menos': 'Ver más'}}</app-link> 
+                </ng-template>
+                
+                <ng-template #fullText>
+                    <div (click)="clickParagraph($event)">
+                        <p>
+                            {{ content }} 
+                        </p>
+                    </div>
+                </ng-template>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Post Footer -->
+    <section  class="link-answers flex items-center justify-between mt-2 pb-5">
+        <div *ngIf="!noIcons">
+            <!-- font-size-content 0.8rem -->
+            <!-- color: blue-light -->
+
+
+            <app-link
+                [size]="0.8"
+                [color]="color"
+                class="mx-1"
+                (click)="clickLike($event)"
+            >
+                <app-icon 
+                    icon="like"
+                    color="#00B0EB" 
+                    ></app-icon>
+                    {{ nLikes }}
+            </app-link>
+
+            <app-link
+                [size]="0.8"
+                [color]="color"
+                class="mx-1"
+            >
+                <app-icon 
+                    icon="comments-outline" 
+                    color="#00B0EB">
+                </app-icon> {{ nAnswers }}
+            </app-link>
+
+
+
+        </div>
+        <div class="post-button-container flex justify-end" *ngIf="replyButton">
+            <!-- TODO: el evento debe ser un output para usarlo en el componente post -->
+            <app-button skin="secondary-btn-outline" (click)="clickAnswer($event)">{{ buttonInfo }}</app-button>
+        </div>
+    </section>
+
+    <!-- End Post Footer -->
+
+</section>

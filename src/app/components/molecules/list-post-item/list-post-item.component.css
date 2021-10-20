@@ -1,0 +1,30 @@
+.list-post-item{
+    border-bottom: 1px solid var(--post-border);
+    background-color: #fff;
+}
+
+.item-container{
+    cursor:pointer;
+}
+
+.content{
+    font-size:0.9rem;
+    line-height: 1.2;
+    color:var(--titles-gray)
+}
+
+.answerRelated{
+    font-size: var(--font-size-mini);
+    font-family: var(--light-font);
+}
+
+.answerRelated span{
+    color: var(--blue_light);
+}
+
+.next-button-label{
+    font-family: var(--light-font);
+    font-size: var(--font-size-content);
+    transform: translateY(-3rem);
+    color:var(--titles-gray)
+}

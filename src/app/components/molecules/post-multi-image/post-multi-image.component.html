@@ -1,0 +1,6 @@
+
+<p-galleria [value]="images" [showThumbnails]="false" [showIndicators]="true" [draggable]="true" [transitionInterval]="500">
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" [alt]="item.alt" />
+    </ng-template>
+</p-galleria>
